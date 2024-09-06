@@ -6,6 +6,7 @@ include 'db_connect.php';
 // Get form data
 $fullname = $_POST['fullname'];
 $email = $_POST['email'];
+$mobile = $_POST['mobile'];
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hashing the password for security
 $categoryType = $_POST['categoryType'];
 $categoryName = $_POST['categoryName'];
@@ -17,8 +18,8 @@ $randomNumber = mt_rand(100000, 999999);
 // Insert data into database
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 try {
-    $sql = "INSERT INTO users (fullname, email, password, categoryType, categoryName, status, createAt, access_code, reset_token, reset_expiry, role) 
-        VALUES ('$fullname', '$email', '$password', '$categoryType', '$categoryName', '$status', '$createAt', '$randomNumber', Null, Null, 'participant')";
+    $sql = "INSERT INTO users (fullname, email, mobile, password, categoryType, categoryName, status, createAt, access_code, reset_token, reset_expiry, role) 
+        VALUES ('$fullname', '$email', '$mobile', '$password', '$categoryType', '$categoryName', '$status', '$createAt', '$randomNumber', Null, Null, 'participant')";
 
     if ($conn->query($sql) === TRUE) {
         $folderName = 'assets/users/' . $conn->insert_id;
