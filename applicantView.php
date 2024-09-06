@@ -268,9 +268,18 @@ $uniqueId = $_SESSION['uniqueId'];
                                     data-bs-parent="#applicationAccordion">
                                     <div class="accordion-body">
                                         <div class="row mb-2">
-                                            <div class=""><label class="h5">Incorporation Certificate</label></div>
                                             <div class="">
-                                                <p><a href="<?= $row['incorporation'] ?>" target="_new" class="text-decoration-none"><?= $row['incorporation'] ?></a></p>
+                                                <a href="<?= $row['shareholding'] ?>" target="_new" class="text-decoration-none h5">51% shareholding by Indian citizen</a>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="">
+                                                <a href="<?= $row['incorporation'] ?>" target="_new" class="text-decoration-none h5">Incorporation Certificate</a>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="">
+                                                <a href="<?= $row['idProof'] ?>" target="_new" class="text-decoration-none h5">ID Proof/ Passport</a>
                                             </div>
                                         </div>
                                     </div>
