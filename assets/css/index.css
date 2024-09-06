@@ -1,0 +1,532 @@
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+.logo {
+  width: 65px;
+  height: 65px;
+}
+.navbar {
+  border-bottom: 1px solid #e3dfdf;
+}
+.navbar-nav .nav-item {
+  position: relative;
+}
+.navbar-nav .nav-item:not(:first-child)::before {
+  content: "|";
+  position: absolute;
+  left: -10px;
+  color: #5d5c5c;
+  font-size: 1rem;
+}
+.navbar-nav .nav-item .nav-link {
+  padding-right: 1.2rem;
+  color: #0b0b0b;
+  display: inline;
+}
+.navbar-nav .nav-item .nav-link:hover {
+  color: #010912;
+}
+.offcanvas-body .navbar-nav .nav-link {
+  color: #333;
+}
+.offcanvas-body .navbar-nav .nav-link:hover {
+  color: #0056b3;
+}
+.btn-violet {
+  background-color: #6a0dad;
+  color: white;
+  width: 100%;
+  border: none;
+}
+.btn-violet:hover {
+  background-color: #5c0ea9;
+}
+.nav-tabs .nav-link.active {
+  background-color: #6a0dad;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+}
+.nav-tabs .nav-link {
+  color: #6a0dad;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #f8f9fa;
+  margin-right: 0.5rem;
+}
+.nav-tabs .nav-link:hover {
+  background-color: #e9ecef;
+  color: #6a0dad;
+}
+.modal-footer .btn-primary {
+  background-color: #6a0dad;
+  border: none;
+  width: 100%;
+}
+.modal-footer .btn-primary:hover {
+  background-color: #5a0a9d;
+  border: none;
+}
+.modal-header {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.modal-body {
+  padding-top: 0;
+}
+.modal-content {
+  padding: 20px;
+}
+.modal-header .btn-close {
+  padding: 0.5rem;
+  font-size: 1.25rem;
+}
+.modal-footer button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+/* Sections */
+.section-heading {
+  padding-top: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+}
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #000;
+  margin: 10px auto 0;
+}
+/* Problem Statements Section */
+#problemstatements {
+  /* background-color: #f8f9fa; */
+  background: url(../images/bg3.png) repeat !important;
+  padding: 3rem 0;
+  position: relative;
+}
+#problemstatements .section-heading {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2rem;
+  position: relative;
+  color: #333;
+}
+#problemstatements .section-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #6f42c1;
+  margin: 10px auto 0;
+}
+#problemstatements .card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  transition: transform 0.3s;
+  height: 500px;
+}
+#problemstatements .card:hover {
+  transform: translateY(-5px);
+}
+#problemstatements .card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+#problemstatements .card-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+/* Button Styling */
+#problemstatements .btn-primary {
+  background-color: #6f42c1;
+  border-color: #6f42c1;
+  border-radius: 30px;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  transition: background-color 0.3s;
+}
+#problemstatements .btn-primary:hover {
+  background-color: #5930a3;
+  border-color: #5930a3;
+}
+/* Carousel Controls */
+#problemstatements .carousel-control-prev-icon,
+#problemstatements .carousel-control-next-icon {
+  width: 2rem;
+  height: 2rem;
+  background-size: 100%, 100%;
+  background-image: none;
+}
+#problemstatements .carousel-control-prev-icon:after,
+#problemstatements .carousel-control-next-icon:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* Carousel Indicators */
+#problemstatements .carousel-indicators {
+  position: absolute;
+  /* bottom: -40px; */
+  left: 35%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+#problemstatements .carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  background-color: #ddd;
+  border-radius: 50%;
+  border: none;
+  transition: background-color 0.3s;
+}
+#problemstatements .carousel-indicators .active {
+  background-color: #6f42c1;
+}
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+  #problemstatements .carousel-indicators {
+    bottom: -50px;
+  }
+  #problemstatements .carousel-control-prev,
+  #problemstatements .carousel-control-next {
+    width: 30px;
+  }
+  #problemstatements .carousel-control-prev-icon:after,
+  #problemstatements .carousel-control-next-icon:after {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+/* Eligibility Section */
+#eligibility .card {
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: box-shadow 0.3s ease-in-out;
+  margin-bottom: 25px;
+}
+#eligibility .card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+/* Apply border-top color for each card */
+#eligibility .col-md-4:nth-child(1) .card {
+  border-top: 4px solid #28a745;
+}
+#eligibility .col-md-4:nth-child(2) .card {
+  border-top: 4px solid #007bff;
+}
+#eligibility .col-md-4:nth-child(3) .card {
+  border-top: 4px solid #ffc107;
+}
+#eligibility .col-md-4:nth-child(4) .card {
+  border-top: 4px solid #dc3545;
+}
+#eligibility .col-md-4:nth-child(5) .card {
+  border-top: 4px solid #6c757d;
+}
+#eligibility .col-md-4:nth-child(6) .card {
+  border-top: 4px solid #17a2b8;
+}
+/* Ensure cards are of equal height */
+#eligibility .col-md-4 {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+#eligibility .card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+/* Responsive design */
+@media (max-width: 768px) {
+  #eligibility .card {
+    margin-bottom: 15px;
+  }
+  #eligibility .card-title {
+    font-size: 1.25rem;
+  }
+  #eligibility .card-text {
+    font-size: 1rem;
+  }
+}
+/* timeline */
+#timelines {
+  padding: 3rem 0;
+}
+#timelines .section-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+#timelines .timeline-image-wrapper {
+  padding: 1rem;
+}
+#timelines .timeline-image {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+#timelines .timeline-image:hover {
+  transform: scale(1.02);
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  #timelines {
+    padding: 2rem 0;
+  }
+  #timelines .section-heading {
+    font-size: 1.75rem;
+  }
+  #timelines .timeline-image-wrapper {
+    padding: 0.5rem;
+  }
+}
+/* mentors */
+#meetourmentors {
+  /* background-color: #f8f9fa; */
+  background: url(../images/bg3.png) repeat !important;
+  padding: 3rem 0;
+  position: relative;
+}
+#meetourmentors .section-heading {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2rem;
+  position: relative;
+  color: #333;
+}
+#meetourmentors .section-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #6f42c1;
+  margin: 10px auto 0;
+}
+#meetourmentors .card {
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  transition: transform 0.3s;
+  height: auto; /* Adjust based on content */
+}
+#meetourmentors .card:hover {
+  transform: translateY(-5px);
+}
+#meetourmentors .mentor-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+#meetourmentors .card-body {
+  padding: 1.5rem;
+}
+#meetourmentors .card-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+#meetourmentors .card-text {
+  font-size: 0.9rem;
+  color: #666;
+}
+/* Carousel Controls */
+#meetourmentors .carousel-control-prev-icon,
+#meetourmentors .carousel-control-next-icon {
+  width: 2rem;
+  height: 2rem;
+  background-size: 100%, 100%;
+  background-image: none;
+}
+#meetourmentors .carousel-control-prev-icon:after,
+#meetourmentors .carousel-control-next-icon:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* Carousel Indicators */
+#meetourmentors .carousel-indicators {
+  position: absolute;
+  bottom: -40px;
+  left: 35%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+#meetourmentors .carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  background-color: #ddd;
+  border-radius: 50%;
+  border: none;
+  transition: background-color 0.3s;
+}
+#meetourmentors .carousel-indicators .active {
+  background-color: #6f42c1;
+}
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+  #meetourmentors .carousel-indicators {
+    bottom: -50px;
+  }
+  #meetourmentors .carousel-control-prev,
+  #meetourmentors .carousel-control-next {
+    width: 30px;
+  }
+  #meetourmentors .carousel-control-prev-icon:after,
+  #meetourmentors .carousel-control-next-icon:after {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+.accordion-button {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+  background: #fff; /* Ensure background is white */
+  border: none; /* Remove border if needed */
+}
+.accordion-icon {
+  font-size: 1.2rem; /* Adjust size as needed */
+  color: #007bff; /* Adjust color as needed */
+  position: absolute;
+  left: 1rem; /* Adjust distance from left */
+}
+.accordion-button .accordion-icon {
+  z-index: 1; /* Ensure icon is above any other elements */
+}
+.accordion-button span {
+  margin-left: 2.5rem; /* Add space between icon and text */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+.accordion-button:not(.collapsed) span {
+  color: #007bff; /* Blue color when expanded */
+}
+.accordion-button::after {
+  display: none; /* Hide default arrow */
+}
+.accordion-body ul {
+  list-style: none; /* Remove default list item dots */
+  padding-left: 0; /* Remove default padding */
+}
+.accordion-item {
+  margin-bottom: 1rem; /* Space between accordion items */
+}
+@media (max-width: 576px) {
+  .accordion-button {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+#contact {
+  /* background-color: #f8f9fa; */
+  background: url(../images/bg3.png) repeat !important;
+  padding: 5rem 0;
+}
+#contact .section-heading {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: #333;
+  position: relative;
+}
+#contact .section-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #6f42c1;
+  margin: 10px auto 0;
+}
+#contact .lead {
+  font-size: 1.125rem;
+  color: #555;
+}
+.contact-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.contact-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+.contact-location {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #007bff; /* Matching your theme */
+}
+.contact-card p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+.contact-card strong {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 767.98px) {
+  #contact .section-heading {
+    font-size: 1.75rem;
+  }
+  #contact .lead {
+    font-size: 1rem;
+  }
+}
+footer {
+  background-color: #ffffff;
+}
+footer .social-media-icons a {
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+footer .social-media-icons a:hover {
+  color: #6f42c1; /* Adjust to match your theme */
+}
+footer .footer-links a {
+  font-size: 1rem;
+  text-decoration: none;
+}
+footer .footer-links a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 767.98px) {
+  footer .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-links {
+    margin-top: 1rem;
+  }
+}

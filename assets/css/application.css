@@ -1,0 +1,104 @@
+body {
+  background: url(../images/bg3.png) repeat !important;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.stepper-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  position: relative;
+  width: 100%;
+  border-radius: none;
+}
+.stepper-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #00a65a;
+  z-index: 0;
+}
+.stepper-item {
+  z-index: 1;
+  text-align: center;
+  flex: 1;
+}
+.stepper-item .step-counter {
+  width: 40px;
+  height: 40px;
+  background-color: #f4d03f;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+.stepper-item .step-name {
+  margin-top: 8px;
+  font-size: 14px;
+}
+.stepper-item.completed .step-counter {
+  background-color: #4caf50;
+}
+ 
+/* Apply a border when the input is focused */
+.form-control:focus {
+  box-shadow: none;
+  border-color: rgb(59, 50, 50); /* Change the border color on focus */
+  outline: none; /* Remove the default outline */
+}
+.card {
+  border-radius: 0;
+}
+.nav-link {
+  color: black !important;
+}
+.button-section {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  width: 100%; /* Ensures the section takes up the full width */
+  padding: 10px; /* Optional padding for spacing */
+}
+/* Custom styles for the Save button */
+.save-btn {
+  border-color: violet;
+  color: rgb(7, 6, 6);
+  background-color: white; /* Makes the background transparent */
+}
+.save-btn:hover {
+  border-color: rgb(133, 3, 133);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Apply shadow on hover */
+}
+/* Custom styles for the Submit button */
+.submit-btn {
+  background-color: rgb(134, 8, 134);
+  color: rgb(230, 226, 226);
+  border-color: violet; /* Ensures the border matches the background */
+}
+.submit-btn:hover {
+  background-color: violet;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Apply shadow on hover */
+}
+.head{
+  background-color: rgb(137, 9, 137);
+}
+.font{
+  font-family: sans-serif;
+}
+.error {
+  color: red;
+}
