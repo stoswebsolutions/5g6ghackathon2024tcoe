@@ -65,7 +65,7 @@ $uniqueId = $_SESSION['uniqueId'];
     <div class="container mt-0">
         <div class="row justify-content-center">
             <div class="col-lg-9 col-md-9">
-                <h2 class="">My Application</h2>
+                
             </div>
             <div class="col-lg-3 col-md-3">
                 <button type="button" id="psButton" class="btn btn-primary text-white">Apply More Problem Statements</button>
@@ -281,7 +281,7 @@ $uniqueId = $_SESSION['uniqueId'];
                     }
                 } else {
                     ?>
-                    <h4>No record found for ID</h4>
+                    <h6 class="p-1" style="background-color: rgb(137, 9, 137);color:#fff;">Still you didn't Submit any Problem Statement. Click Apply Button</h6>
                 <?php
                 }
                 ?>
@@ -293,7 +293,7 @@ $uniqueId = $_SESSION['uniqueId'];
         var psButton = document.getElementById("psButton");
         psButton.addEventListener("click", function() {
             alert('You will be redirected to the problem statements section.');
-            window.location.href = 'problemstatements';
+            window.location.href = 'problem-statements';
         });
     </script>
 
