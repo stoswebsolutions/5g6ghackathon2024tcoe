@@ -17,7 +17,7 @@
 
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
-            <a class="navbar-brand p-0" href="home">
+            <a class="navbar-brand p-0" href="participant">
                 <img
                     src="assets/images/Tcoe_logo.jpg"
                     class="logo ms-5 p-0"
@@ -33,7 +33,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="home">Home</a>
+                        <a class="nav-link" href="participant">Home</a>
                     </li>
                 </ul>
             </div>
@@ -53,7 +53,7 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="home">Home</a>
+                        <a class="nav-link" href="participant">Home</a>
                     </li>
                 </ul>
             </div>
@@ -78,7 +78,7 @@
                                 <td>All Other areas (Suo Moto)</td>
                                 <td><img src="assets/images/suo_moto.png" class="img-fluid w-25" alt="All Other areas (Suo Moto)" /></td>
                                 <th> <button class="btn btn-primary" data-bs-toggle="modal"
-                                        data-bs-target="#applyModal">
+                                        data-bs-target="#applyModal" data-user-name="All Other areas (Suo Moto)">
                                         Apply&nbsp;Now
                                     </button></th>
                                 <th><a href="#" class="btn btn-link" data-bs-toggle="modal"
@@ -89,7 +89,7 @@
                                 <td>AI-Driven Network Maintenance</td>
                                 <td><img src="assets/images/ai_driven.png" class="img-fluid w-25" alt="AI-Driven Network Maintenance" /></td>
                                 <th> <button class="btn btn-primary" data-bs-toggle="modal"
-                                        data-bs-target="#applyModal">
+                                        data-bs-target="#applyModal" data-user-name="AI-Driven Network Maintenance">
                                         Apply&nbsp;Now
                                     </button></th>
                                 <th><a href="#" class="btn btn-link" data-bs-toggle="modal"
@@ -100,7 +100,7 @@
                                 <td>Multi-Modal Interactive System</td>
                                 <td><img src="assets/images/multi_model.png" class="img-fluid w-25" alt="Multi-Modal Interactive System" /></td>
                                 <th> <button class="btn btn-primary" data-bs-toggle="modal"
-                                        data-bs-target="#applyModal">
+                                        data-bs-target="#applyModal" data-user-name="Multi-Modal Interactive System">
                                         Apply&nbsp;Now
                                     </button></th>
                                 <th><a href="#" class="btn btn-link" data-bs-toggle="modal"
@@ -111,7 +111,7 @@
                                 <td>5G Kiosk</td>
                                 <td><img src="assets/images/5g_kiosk.jpg" class="img-fluid w-25" alt="5G Kiosk" /></td>
                                 <th> <button class="btn btn-primary" data-bs-toggle="modal"
-                                        data-bs-target="#applyModal">
+                                        data-bs-target="#applyModal" data-user-name="5G Kiosk">
                                         Apply&nbsp;Now
                                     </button></th>
                                 <th><a href="#" class="btn btn-link" data-bs-toggle="modal"
@@ -122,7 +122,7 @@
                                 <td>5G Enabled Consoles/Devices</td>
                                 <td><img src="assets/images/5g_enabled.png" class="img-fluid w-25" alt="5G Enabled Consoles/Devices" /></td>
                                 <th> <button class="btn btn-primary" data-bs-toggle="modal"
-                                        data-bs-target="#applyModal">
+                                        data-bs-target="#applyModal" data-user-name="5G Enabled Consoles/Devices">
                                         Apply&nbsp;Now
                                     </button></th>
                                 <th><a href="#" class="btn btn-link" data-bs-toggle="modal"
@@ -133,7 +133,7 @@
                                 <td>Real Time Control Of Advanced Drones</td>
                                 <td><img src="assets/images/realtime_control.png" class="img-fluid w-25" alt="Real Time Control Of Advanced Drones" /></td>
                                 <th> <button class="btn btn-primary" data-bs-toggle="modal"
-                                        data-bs-target="#applyModal">
+                                        data-bs-target="#applyModal" data-user-name="Real Time Control Of Advanced Drones">
                                         Apply&nbsp;Now
                                     </button></th>
                                 <th><a href="#" class="btn btn-link" data-bs-toggle="modal"
@@ -144,7 +144,7 @@
                                 <td>Digital Twin Technology</td>
                                 <td><img src="assets/images/digital_twin.png" class="img-fluid w-25" alt="Digital Twin Technology" /></td>
                                 <th> <button class="btn btn-primary" data-bs-toggle="modal"
-                                        data-bs-target="#applyModal">
+                                        data-bs-target="#applyModal" data-user-name="Digital Twin Technology">
                                         Apply&nbsp;Now
                                     </button></th>
                                 <th><a href="#" class="btn btn-link" data-bs-toggle="modal"
@@ -155,7 +155,7 @@
                                 <td>Non-Terrestrial Network (NTN) Communications</td>
                                 <td><img src="assets/images/ntn.png" class="img-fluid w-25" alt="Non-Terrestrial Network (NTN) Communications" /></td>
                                 <th> <button class="btn btn-primary" data-bs-toggle="modal"
-                                        data-bs-target="#applyModal">
+                                        data-bs-target="#applyModal" data-user-name="Non-Terrestrial Network (NTN) Communications">
                                         Apply&nbsp;Now
                                     </button></th>
                                 <th><a href="#" class="btn btn-link" data-bs-toggle="modal"
@@ -166,7 +166,7 @@
                                 <td>5G Broadcasting</td>
                                 <td><img src="assets/images/5g_broadcast.png" class="img-fluid w-25" alt="5G Broadcasting" /></td>
                                 <th> <button class="btn btn-primary" data-bs-toggle="modal"
-                                        data-bs-target="#applyModal">
+                                        data-bs-target="#applyModal" data-user-name="5G Broadcasting">
                                         Apply&nbsp;Now
                                     </button></th>
                                 <th><a href="#" class="btn btn-link" data-bs-toggle="modal"
@@ -177,7 +177,7 @@
                                 <td>Emergency Communication Systems</td>
                                 <td><img src="assets/problem_statements/5g broadcast 10.jpeg" class="img-fluid w-25" alt="Emergency Communication Systems" /></td>
                                 <th> <button class="btn btn-primary" data-bs-toggle="modal"
-                                        data-bs-target="#applyModal">
+                                        data-bs-target="#applyModal" data-user-name="Emergency Communication Systems">
                                         Apply&nbsp;Now
                                     </button></th>
                                 <th><a href="#" class="btn btn-link" data-bs-toggle="modal"
@@ -188,7 +188,7 @@
                                 <td>Virtual Networking and SDN</td>
                                 <td><img src="assets/problem_statements/5g oran.png" class="img-fluid w-25" alt="Virtual Networking and SDN" /></td>
                                 <th> <button class="btn btn-primary" data-bs-toggle="modal"
-                                        data-bs-target="#applyModal">
+                                        data-bs-target="#applyModal" data-user-name="Virtual Networking and SDN">
                                         Apply&nbsp;Now
                                     </button></th>
                                 <th><a href="#" class="btn btn-link" data-bs-toggle="modal"
@@ -207,302 +207,307 @@
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-md">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="termsModalLabel">
-                            Terms and Conditions
-                        </h5>
-                        <button
-                            type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body" style="max-height: 70vh; overflow-y: auto">
-                        <p>
-                            <strong>TERMS AND CONDITIONS OF 5G-6G HACKATHON 2024</strong>
-                        </p>
-                        <p>
-                            These Terms and Conditions elucidate the directives of use and
-                            participation in the 5G & 6G Hackathon 2024. Your acceptance of
-                            the same implies your acceptance of these directives mentioned
-                            herein under.
-                        </p>
-                        <p>
-                            The Department of Telecommunications (DoT) is at liberty to
-                            alter or modify these terms and conditions without prior notice.
-                            You are expected to be up to date with the modifications
-                            forthwith.
-                        </p>
-                        <p><strong>Receipt of Entries and Eligibility</strong></p>
-                        <ol>
-                            <li>
-                                Entries shall be invited through an online entry form as
-                                available on the
-                                <a href="https://5g6g-hackathon2024.tcoe.in/" target="_blank">https://5g6g-hackathon2024.tcoe.in/</a>
-                                website.
-                            </li>
-                            <li>
-                                This 5G & 6G Hackathon is organized to identify & promote
-                                applications relevant to India, in the 5G & 6G realm that can
-                                be converted into workable products and services.
-                            </li>
-                            <li>
-                                The Contest is open to all students, startups, academic
-                                institutions in India. However, employees of the DoT, IMC,
-                                DCIS beneficiaries or startups connected with them as
-                                promoters/partners are not eligible.
-                            </li>
-                            <li>
-                                Entries will be accepted in English language only and the
-                                submissions should be made in the template provided on the
-                                <a href="https://5g6g-hackathon2024.tcoe.in/" target="_blank">https://5g6g-hackathon2024.tcoe.in/</a>
-                                Website.
-                            </li>
-                            <li>
-                                Any incomplete/inaccurate entries or entry after the close of
-                                Entry Period shall be invalid and any such entry may be
-                                permitted only at the sole discretion of the DoT.
-                            </li>
-                            <li>
-                                The right to permit or restrict participation is at the sole
-                                discretion of the DoT.
-                            </li>
-                            <li>
-                                Awards and Recognition shall be given as per the criteria laid
-                                down by the DoT and as specified underneath of the Hackathon.
-                            </li>
-                            <li>
-                                You are expected to come up with new and innovative ideas for
-                                5G & 6G use cases applicable in the Indian context and any
-                                idea that appears to have been copied from somewhere shall be
-                                disqualified.
-                            </li>
-                            <li>
-                                Your ideas must be developed entirely during the Hackathon
-                                duration by participants. You may use open source libraries
-                                and other freely available systems / services such as Google
-                                Maps, Facebook Connect, Twitter feeds etc.
-                            </li>
-                        </ol>
-                        <p><strong>Submission of Participant Information</strong></p>
-                        <ol>
-                            <li>
-                                DoT has the right to substantiate/verify the participants'
-                                details/information as provided in the entry form and may also
-                                seek any further document, as may be required to verify the
-                                participants' details/ information.
-                            </li>
-                            <li>
-                                The participant must provide all supporting details requested
-                                by the DoT to substantiate/verify the information provided in
-                                the entry form. If such a request is made and the participant
-                                either fails or does not agree to provide the same, then the
-                                DoT reserves the right to disqualify such participant from
-                                participating in the Hackathon.
-                            </li>
-                            <li>
-                                Ideas given by Startups which have already been selected in
-                                the earlier 5G Hackathon organized by any ministries shall not
-                                be eligible.
-                            </li>
-                            <li>
-                                Ideas shall be connected to either 5G or 6G. Ideas without
-                                basic connection to these technologies shall not be eligible.
-                            </li>
-                            <li>
-                                Determination of whether information is correct or not, rests
-                                solely with the DoT.
-                            </li>
-                            <li>
-                                If at any stage or time, the information provided by any
-                                participant is found to be incorrect in any manner, then the
-                                participant will be disqualified from participating in the
-                                Hackathon.
-                            </li>
-                            <li>
-                                If, after the conclusion of the Hackathon, any information
-                                provided by any participant is found to be incorrect in any
-                                manner, the participant will be liable to return the
-                                prize/award/recognition (if any) or any other
-                                monetary/non-monetary incentives provided as part of the
-                                Hackathon.
-                            </li>
-                        </ol>
-                        <p>
-                            <strong>Determination of Qualifying Team and Decision as to the
-                                ‘Winner’</strong>
-                        </p>
-                        <ol>
-                            <li>
-                                The DoT shall identify all qualifying participants and their
-                                decision shall be final and binding on all participants.
-                            </li>
-                            <li>
-                                The DoT shall score and/or rank each team based on pre-defined
-                                evaluation criteria and the final scores will be collated and
-                                tabulated to determine the Winners based on the parameters
-                                determined by DoT.
-                            </li>
-                        </ol>
-                        <p><strong>Award and Recognition</strong></p>
-                        <ol>
-                            <li>
-                                The top 5 winners from each location will be awarded;
-                                <ul>
-                                    <li>1st winner-2 lakhs</li>
-                                    <li>2nd winner-1.5 lakhs</li>
-                                    <li>3rd winner-1 lakh</li>
-                                    <li>4th winner-75k</li>
-                                    <li>5th winner-50k</li>
-                                </ul>
-                            </li>
-                            <li>
-                                All winners will be provided a unique opportunity by being
-                                allotted a Free Pod space in “Aspire Startups Zone”, during
-                                IMC 2024 to showcase their solutions and to explore
-                                collaboration to make them market-ready with the support of
-                                DoT, MeitY and a number of leading industries, academia,
-                                Telcos/OEMs.
-                            </li>
-                            <li>
-                                The Prize shall not be transferable. No request shall be
-                                entertained by the DoT on this account.
-                            </li>
-                            <li>
-                                Any statutory taxes, duties or levies as may be applicable
-                                from time to time, arising out/ in respect of such prize,
-                                shall be payable by the Winner of the respective Prize.
-                            </li>
-                            <li>
-                                DoT shall not be liable for any loss, damage, theft, or any
-                                other mishap caused to the Prize after handing over the same
-                                to the Winners of the Contest.
-                            </li>
-                        </ol>
-                        <p><strong>General</strong></p>
-                        <ol>
-                            <li>
-                                Entries protected under intellectual property rights are
-                                acceptable as submissions to the Hackathon. However, the DoT
-                                shall not be liable for the protection of any proprietary or
-                                confidential information contained in any entry form.
-                            </li>
-                            <li>
-                                The ideas submitted by the participants shall solely remain
-                                their intellectual property in the Hackathon.
-                            </li>
-                            <li>
-                                The participant warrants and represents that it owns all
-                                rights, or has all necessary licenses, to use any and all
-                                idea/s (and all constituent parts) they will be submitting
-                                under this Hackathon for evaluation, including without
-                                limitation all content, images, text, or other copyright
-                                material, trademarks, service marks, logos or any other
-                                intellectual property contained within its Idea, and can, upon
-                                request, shall provide written confirmation of such ownership
-                                or license to the DoT. The participant further warrants and
-                                represents that all the ideas submitted are original and have
-                                been legally obtained and created, and do not infringe the
-                                intellectual property rights or any other legal or moral
-                                rights of any third party.
-                            </li>
-                            <li>
-                                The participant additionally grants to DoT and its affiliates,
-                                the right and permission to reproduce, encode, store, copy,
-                                transmit, publish, broadcast, display, publicly perform,
-                                exhibit and/or otherwise use or reuse (without limitation as
-                                to when or to the number of times used), the participant's
-                                name, address, image, voice, statements and idea/s (in each
-                                case, as submitted or as edited by DoT, in DoT's sole
-                                discretion), as well as any additional photographic images,
-                                video images, portraits, interviews or other materials
-                                relating to the participant and arising out of his/her
-                                participation in this Hackathon (with or without using the
-                                participant's name) (collectively, the "additional materials")
-                                in any media throughout the world for advertising and
-                                publicity purposes without additional review, compensation, or
-                                approval.
-                            </li>
-                            <li>
-                                The participant waives any rights of publicity, rights of
-                                privacy, intellectual property rights, and any other legal or
-                                moral rights that might preclude the DoT's use of the Idea/s
-                                or the additional materials or require the participant's
-                                permission for DoT to use them for promotional purposes, and
-                                hereby waives any claim against the DoT relating to the DoT
-                                promotional use of those materials.
-                            </li>
-                            <li>
-                                The participant agrees to indemnify and hold the DoT and their
-                                respective affiliates, directors, employees, agents and
-                                partners (“DoT’s Associates”) harmless from any and all direct
-                                and indirect claims, damages, expenses, costs (including
-                                reasonable attorneys' fees) and liabilities (including
-                                settlements), brought or asserted by any third party against
-                                any of the DoT Associates due to or arising out of the use of
-                                the idea/s or additional materials and/or in connection with
-                                participation in or winning the Hackathon.
-                            </li>
-                            <li>
-                                DoT will not be liable for:
-                                <ul>
-                                    <li>
-                                        Any incorrect or inaccurate information, whether caused by
-                                        the participant, printing errors or by any of the
-                                        equipment or programming associated with or utilized in
-                                        the Hackathon.
-                                    </li>
-                                    <li>
-                                        Technical failures of any kind, including, but not limited
-                                        to malfunctions, interruptions, or disconnections in phone
-                                        lines or network hardware or software.
-                                    </li>
-                                    <li>
-                                        Unauthorized human intervention in any part of the entry
-                                        process or the Hackathon.
-                                    </li>
-                                    <li>
-                                        Technical or human error which may occur in the
-                                        administration of the Hackathon or the processing of
-                                        Ideas.
-                                    </li>
-                                    <li>
-                                        Any injury or damage to persons or property which may be
-                                        caused, directly or indirectly, in whole or in part, from
-                                        the participant's participation in the Hackathon or
-                                        receipt or use or misuse of any prize.
-                                    </li>
-                                    <li>
-                                        Any and all expenses, costs or other charges associated
-                                        with the Winner's acceptance and/or use of the prize shall
-                                        be the responsibility of the Winner.
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                DoT reserves the right to cancel, suspend and/or modify the
-                                Hackathon, or any part of it, if any fraud, technical failures
-                                or any other factor beyond DoT's reasonable control impairs
-                                the integrity or proper functioning of the Hackathon, as
-                                determined by DoT in its sole discretion. DoT, in its sole
-                                discretion, reserves the right to disqualify any individual it
-                                finds to be tampering with the entry process or the operation
-                                of the Hackathon or to be acting in violation of these Terms &
-                                Conditions.
-                            </li>
-                            <li>
-                                DoT's decision shall be final and binding in all matters
-                                related to the Hackathon. DoT reserves the right to disqualify
-                                any participant who is found to be undermining the legitimate
-                                operation of the Hackathon or other participants, or to be
-                                acting in a disruptive manner, or with the intent to annoy,
-                                abuse, threaten or harass any other person.
-                            </li>
-                        </ol>
-                        <div class="modal-footer">
-                            <a href="home#authModal" class="btn btn-primary">I Agree</a>
+                    <form action="application" method="post">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="termsModalLabel">
+                                Terms and Conditions
+                            </h5>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"></button>
                         </div>
-                    </div>
+                        <div class="modal-body" style="max-height: 70vh; overflow-y: auto">
+                            <p>
+                                <strong>TERMS AND CONDITIONS OF 5G-6G HACKATHON 2024</strong>
+                            </p>
+                            <p>
+                                These Terms and Conditions elucidate the directives of use and
+                                participation in the 5G & 6G Hackathon 2024. Your acceptance of
+                                the same implies your acceptance of these directives mentioned
+                                herein under.
+                            </p>
+                            <p>
+                                The Department of Telecommunications (DoT) is at liberty to
+                                alter or modify these terms and conditions without prior notice.
+                                You are expected to be up to date with the modifications
+                                forthwith.
+                            </p>
+                            <p><strong>Receipt of Entries and Eligibility</strong></p>
+                            <ol>
+                                <li>
+                                    Entries shall be invited through an online entry form as
+                                    available on the
+                                    <a href="https://5g6g-hackathon2024.tcoe.in/" target="_blank">https://5g6g-hackathon2024.tcoe.in/</a>
+                                    website.
+                                </li>
+                                <li>
+                                    This 5G & 6G Hackathon is organized to identify & promote
+                                    applications relevant to India, in the 5G & 6G realm that can
+                                    be converted into workable products and services.
+                                </li>
+                                <li>
+                                    The Contest is open to all students, startups, academic
+                                    institutions in India. However, employees of the DoT, IMC,
+                                    DCIS beneficiaries or startups connected with them as
+                                    promoters/partners are not eligible.
+                                </li>
+                                <li>
+                                    Entries will be accepted in English language only and the
+                                    submissions should be made in the template provided on the
+                                    <a href="https://5g6g-hackathon2024.tcoe.in/" target="_blank">https://5g6g-hackathon2024.tcoe.in/</a>
+                                    Website.
+                                </li>
+                                <li>
+                                    Any incomplete/inaccurate entries or entry after the close of
+                                    Entry Period shall be invalid and any such entry may be
+                                    permitted only at the sole discretion of the DoT.
+                                </li>
+                                <li>
+                                    The right to permit or restrict participation is at the sole
+                                    discretion of the DoT.
+                                </li>
+                                <li>
+                                    Awards and Recognition shall be given as per the criteria laid
+                                    down by the DoT and as specified underneath of the Hackathon.
+                                </li>
+                                <li>
+                                    You are expected to come up with new and innovative ideas for
+                                    5G & 6G use cases applicable in the Indian context and any
+                                    idea that appears to have been copied from somewhere shall be
+                                    disqualified.
+                                </li>
+                                <li>
+                                    Your ideas must be developed entirely during the Hackathon
+                                    duration by participants. You may use open source libraries
+                                    and other freely available systems / services such as Google
+                                    Maps, Facebook Connect, Twitter feeds etc.
+                                </li>
+                            </ol>
+                            <p><strong>Submission of Participant Information</strong></p>
+                            <ol>
+                                <li>
+                                    DoT has the right to substantiate/verify the participants'
+                                    details/information as provided in the entry form and may also
+                                    seek any further document, as may be required to verify the
+                                    participants' details/ information.
+                                </li>
+                                <li>
+                                    The participant must provide all supporting details requested
+                                    by the DoT to substantiate/verify the information provided in
+                                    the entry form. If such a request is made and the participant
+                                    either fails or does not agree to provide the same, then the
+                                    DoT reserves the right to disqualify such participant from
+                                    participating in the Hackathon.
+                                </li>
+                                <li>
+                                    Ideas given by Startups which have already been selected in
+                                    the earlier 5G Hackathon organized by any ministries shall not
+                                    be eligible.
+                                </li>
+                                <li>
+                                    Ideas shall be connected to either 5G or 6G. Ideas without
+                                    basic connection to these technologies shall not be eligible.
+                                </li>
+                                <li>
+                                    Determination of whether information is correct or not, rests
+                                    solely with the DoT.
+                                </li>
+                                <li>
+                                    If at any stage or time, the information provided by any
+                                    participant is found to be incorrect in any manner, then the
+                                    participant will be disqualified from participating in the
+                                    Hackathon.
+                                </li>
+                                <li>
+                                    If, after the conclusion of the Hackathon, any information
+                                    provided by any participant is found to be incorrect in any
+                                    manner, the participant will be liable to return the
+                                    prize/award/recognition (if any) or any other
+                                    monetary/non-monetary incentives provided as part of the
+                                    Hackathon.
+                                </li>
+                            </ol>
+                            <p>
+                                <strong>Determination of Qualifying Team and Decision as to the
+                                    ‘Winner’</strong>
+                            </p>
+                            <ol>
+                                <li>
+                                    The DoT shall identify all qualifying participants and their
+                                    decision shall be final and binding on all participants.
+                                </li>
+                                <li>
+                                    The DoT shall score and/or rank each team based on pre-defined
+                                    evaluation criteria and the final scores will be collated and
+                                    tabulated to determine the Winners based on the parameters
+                                    determined by DoT.
+                                </li>
+                            </ol>
+                            <p><strong>Award and Recognition</strong></p>
+                            <ol>
+                                <li>
+                                    The top 5 winners from each location will be awarded;
+                                    <ul>
+                                        <li>1st winner-2 lakhs</li>
+                                        <li>2nd winner-1.5 lakhs</li>
+                                        <li>3rd winner-1 lakh</li>
+                                        <li>4th winner-75k</li>
+                                        <li>5th winner-50k</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    All winners will be provided a unique opportunity by being
+                                    allotted a Free Pod space in “Aspire Startups Zone”, during
+                                    IMC 2024 to showcase their solutions and to explore
+                                    collaboration to make them market-ready with the support of
+                                    DoT, MeitY and a number of leading industries, academia,
+                                    Telcos/OEMs.
+                                </li>
+                                <li>
+                                    The Prize shall not be transferable. No request shall be
+                                    entertained by the DoT on this account.
+                                </li>
+                                <li>
+                                    Any statutory taxes, duties or levies as may be applicable
+                                    from time to time, arising out/ in respect of such prize,
+                                    shall be payable by the Winner of the respective Prize.
+                                </li>
+                                <li>
+                                    DoT shall not be liable for any loss, damage, theft, or any
+                                    other mishap caused to the Prize after handing over the same
+                                    to the Winners of the Contest.
+                                </li>
+                            </ol>
+                            <p><strong>General</strong></p>
+                            <ol>
+                                <li>
+                                    Entries protected under intellectual property rights are
+                                    acceptable as submissions to the Hackathon. However, the DoT
+                                    shall not be liable for the protection of any proprietary or
+                                    confidential information contained in any entry form.
+                                </li>
+                                <li>
+                                    The ideas submitted by the participants shall solely remain
+                                    their intellectual property in the Hackathon.
+                                </li>
+                                <li>
+                                    The participant warrants and represents that it owns all
+                                    rights, or has all necessary licenses, to use any and all
+                                    idea/s (and all constituent parts) they will be submitting
+                                    under this Hackathon for evaluation, including without
+                                    limitation all content, images, text, or other copyright
+                                    material, trademarks, service marks, logos or any other
+                                    intellectual property contained within its Idea, and can, upon
+                                    request, shall provide written confirmation of such ownership
+                                    or license to the DoT. The participant further warrants and
+                                    represents that all the ideas submitted are original and have
+                                    been legally obtained and created, and do not infringe the
+                                    intellectual property rights or any other legal or moral
+                                    rights of any third party.
+                                </li>
+                                <li>
+                                    The participant additionally grants to DoT and its affiliates,
+                                    the right and permission to reproduce, encode, store, copy,
+                                    transmit, publish, broadcast, display, publicly perform,
+                                    exhibit and/or otherwise use or reuse (without limitation as
+                                    to when or to the number of times used), the participant's
+                                    name, address, image, voice, statements and idea/s (in each
+                                    case, as submitted or as edited by DoT, in DoT's sole
+                                    discretion), as well as any additional photographic images,
+                                    video images, portraits, interviews or other materials
+                                    relating to the participant and arising out of his/her
+                                    participation in this Hackathon (with or without using the
+                                    participant's name) (collectively, the "additional materials")
+                                    in any media throughout the world for advertising and
+                                    publicity purposes without additional review, compensation, or
+                                    approval.
+                                </li>
+                                <li>
+                                    The participant waives any rights of publicity, rights of
+                                    privacy, intellectual property rights, and any other legal or
+                                    moral rights that might preclude the DoT's use of the Idea/s
+                                    or the additional materials or require the participant's
+                                    permission for DoT to use them for promotional purposes, and
+                                    hereby waives any claim against the DoT relating to the DoT
+                                    promotional use of those materials.
+                                </li>
+                                <li>
+                                    The participant agrees to indemnify and hold the DoT and their
+                                    respective affiliates, directors, employees, agents and
+                                    partners (“DoT’s Associates”) harmless from any and all direct
+                                    and indirect claims, damages, expenses, costs (including
+                                    reasonable attorneys' fees) and liabilities (including
+                                    settlements), brought or asserted by any third party against
+                                    any of the DoT Associates due to or arising out of the use of
+                                    the idea/s or additional materials and/or in connection with
+                                    participation in or winning the Hackathon.
+                                </li>
+                                <li>
+                                    DoT will not be liable for:
+                                    <ul>
+                                        <li>
+                                            Any incorrect or inaccurate information, whether caused by
+                                            the participant, printing errors or by any of the
+                                            equipment or programming associated with or utilized in
+                                            the Hackathon.
+                                        </li>
+                                        <li>
+                                            Technical failures of any kind, including, but not limited
+                                            to malfunctions, interruptions, or disconnections in phone
+                                            lines or network hardware or software.
+                                        </li>
+                                        <li>
+                                            Unauthorized human intervention in any part of the entry
+                                            process or the Hackathon.
+                                        </li>
+                                        <li>
+                                            Technical or human error which may occur in the
+                                            administration of the Hackathon or the processing of
+                                            Ideas.
+                                        </li>
+                                        <li>
+                                            Any injury or damage to persons or property which may be
+                                            caused, directly or indirectly, in whole or in part, from
+                                            the participant's participation in the Hackathon or
+                                            receipt or use or misuse of any prize.
+                                        </li>
+                                        <li>
+                                            Any and all expenses, costs or other charges associated
+                                            with the Winner's acceptance and/or use of the prize shall
+                                            be the responsibility of the Winner.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    DoT reserves the right to cancel, suspend and/or modify the
+                                    Hackathon, or any part of it, if any fraud, technical failures
+                                    or any other factor beyond DoT's reasonable control impairs
+                                    the integrity or proper functioning of the Hackathon, as
+                                    determined by DoT in its sole discretion. DoT, in its sole
+                                    discretion, reserves the right to disqualify any individual it
+                                    finds to be tampering with the entry process or the operation
+                                    of the Hackathon or to be acting in violation of these Terms &
+                                    Conditions.
+                                </li>
+                                <li>
+                                    DoT's decision shall be final and binding in all matters
+                                    related to the Hackathon. DoT reserves the right to disqualify
+                                    any participant who is found to be undermining the legitimate
+                                    operation of the Hackathon or other participants, or to be
+                                    acting in a disruptive manner, or with the intent to annoy,
+                                    abuse, threaten or harass any other person.
+                                </li>
+                            </ol>
+
+                            <div class="modal-footer">
+                                <input type="hidden" class="form-control" id="problemStatementValue" name="problemStatementValue" readonly>
+                                <button type="submit" class="btn btn-primary mt-3 text-white">I Agree
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -903,9 +908,28 @@
         </div>
     </div>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
 </body>
+<script>
+    $(document).ready(function() {
+        // When the modal is about to be shown
+        $('#applyModal').on('show.bs.modal', function(event) {
+            // Button that triggered the modal
+            var button = $(event.relatedTarget);
+            // Extract the data from the button
+            var userName = button.data('user-name');
+            // Update the modal's content
+            var modal = $(this);
+            // modal.find('.modal-title').text('Welcome ' + userName);
+            var userNameInput = document.getElementById('problemStatementValue');
+            if (userNameInput && userName) {
+                userNameInput.value = userName;
+            }
+            // modal.find('#problemStatementValue').text('Hello, ' + userName + '! Ready to apply?');
+        });
+    });
+</script>
 
 </html>

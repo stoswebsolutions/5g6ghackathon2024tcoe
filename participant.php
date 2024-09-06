@@ -159,8 +159,10 @@ if (!isset($_SESSION['uniqueId'])) {
     </section>
     <!-- Problem Statements Section -->
     <div class="container-fluid text-center my-3" id="problemstatements">
-      <div class="text-center mb-5">
+      <div class="d-flex justify-content-around text-center mb-5">
+        <h2></h2>
         <h2 class="section-heading">Problem Statements</h2>
+        <a href="problem-statements" class="text-decoration-none">View All</a>
       </div>
       <div class="row mx-auto my-auto justify-content-center">
         <div id="recipeCarousel1" class="carousel slide" data-bs-ride="carousel">
@@ -169,15 +171,15 @@ if (!isset($_SESSION['uniqueId'])) {
             <div class="carousel-item gap-3 active">
               <div class="col-md-3">
                 <div class="card">
-                  <img src="assets/images/suo_moto.png" class="card-img-top" alt="Suo Moto" />
+                  <img src="assets/images/suo_moto.png" class="card-img-top" alt="All Other areas (Suo Moto)" />
                   <div class="card-body">
                     <h5 class="card-title h6">
-                      Suo Moto
-                      <span class="text-white">Suo Moto</span>
+                      All Other areas (Suo Moto)
+                      <span class="text-white">All Other areas (Suo Moto)</span>
                     </h5>
                     <div class="">
                       <button class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#applyModal" data-user-name="Suo Moto">
+                        data-bs-target="#applyModal" data-user-name="All Other areas (Suo Moto)">
                         Apply Now
                       </button>
                       <a href="#" class="btn btn-link" data-bs-toggle="modal"
@@ -416,7 +418,7 @@ if (!isset($_SESSION['uniqueId'])) {
           </div>
           <div class="modal-body">
             <h3 class="text-center">Problem Statement</h3>
-            <p class="text-center">Suo Moto</p>
+            <p class="text-center">All Other areas (Suo Moto)</p>
             <br />
             <h3 class="text-center">Possible Approach / Simplified Statement</h3>
             <p class="text-center">

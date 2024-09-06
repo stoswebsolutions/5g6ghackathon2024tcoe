@@ -163,8 +163,10 @@
     </section>
     <!-- Problem Statements Section -->
     <div class="container-fluid text-center my-3" id="problemstatements">
-      <div class="text-center mb-5">
+      <div class="d-flex justify-content-around text-center mb-5">
+        <h2></h2>
         <h2 class="section-heading">Problem Statements</h2>
+        <a href="problemstatements" class="text-decoration-none">View All</a>
       </div>
       <div class="row mx-auto my-auto justify-content-center">
         <div id="recipeCarousel1" class="carousel slide" data-bs-ride="carousel">
@@ -173,11 +175,11 @@
             <div class="carousel-item gap-3 active">
               <div class="col-md-3">
                 <div class="card">
-                  <img src="assets/images/suo_moto.png" class="card-img-top" alt="Suo Moto" />
+                  <img src="assets/images/suo_moto.png" class="card-img-top" alt="All Other areas (Suo Moto)" />
                   <div class="card-body">
                     <h5 class="card-title h6">
-                      Suo Moto
-                      <span class="text-white">Suo Moto</span>
+                      All Other areas (Suo Moto)
+                      <span class="text-white">All Other areas (Suo Moto)</span>
                     </h5>
                     <div class="">
                       <button class="btn btn-primary" data-bs-toggle="modal"
@@ -420,7 +422,7 @@
           </div>
           <div class="modal-body">
             <h3 class="text-center">Problem Statement</h3>
-            <p class="text-center">Suo Moto</p>
+            <p class="text-center">All Other areas (Suo Moto)</p>
             <br />
             <h3 class="text-center">Possible Approach / Simplified Statement</h3>
             <p class="text-center">
@@ -1220,6 +1222,15 @@
                       placeholder="Email"
                       id="email"
                       name="email"
+                      required />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Mobile number"
+                      id="mobile"
+                      name="mobile"
                       required />
                   </div>
                   <div class="mb-3">
