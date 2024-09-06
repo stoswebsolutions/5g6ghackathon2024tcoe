@@ -57,6 +57,8 @@ function validateForm() {
     "applying",
     "industry",
     "problemsStatement",
+    "product",
+    "productFile",
   ];
 
   requiredFields.forEach((field) => {
@@ -99,6 +101,9 @@ function validateForm() {
   const fileInputs = {
     productFile: ["pdf", "doc", "docx"],
     similarProductFile: ["pdf", "ppt", "pptx"],
+    presentationVideo: ["ppt", "pptx"],
+    proofPoC: ["jpg", "jpeg", "png"],
+    shareholding: ["pdf"],
     incorporation: ["pdf"],
     idProof: ["pdf"],
   };

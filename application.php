@@ -11,7 +11,7 @@ if (isset($_POST['problemStatementValue']) && !empty(trim($_POST['problemStateme
 ?>
   <script>
     alert('Choose at least one problem statements.');
-    window.location.href = 'participant#problem-statements';
+    window.location.href = 'problem-statements';
   </script>
 <?php
 }
@@ -215,7 +215,7 @@ if (isset($_POST['problemStatementValue']) && !empty(trim($_POST['problemStateme
                 <div id="problemsStatementError" class="error"></div>
               </div>
               <?php
-              if ($problemStatementValue === "Suo Moto") {
+              if ($problemStatementValue === "All Other areas (Suo Moto)") {
               ?>
                 <div class="form-group mb-3">
                   <label for="applicationVerticals">Please select your Application Verticals:</label>
@@ -259,14 +259,19 @@ if (isset($_POST['problemStatementValue']) && !empty(trim($_POST['problemStateme
                 <div id="domainError" class="error"></div>
               </div>
               <div class="form-group mb-3">
-                <label for="product">Brief About Your Product/Solution:</label>
+                <label for="product"><span style="color: red">*</span>Brief About Your Product/Solution:</label>
                 <textarea id="product" name="product" class="form-control"></textarea>
                 <div id="productError" class="error"></div>
               </div>
               <div class="form-group mb-3">
-                <label for="productFile">Upload the note on Technical Details or Product/Solution:</label>
+                <label for="productFile"><span style="color: red">*</span>Upload the note on Technical Details or Product/Solution:</label>
                 <input type="file" id="productFile" name="productFile" accept=".pdf,.doc,.docx" class="form-control">
                 <div id="productFileError" class="error"></div>
+              </div>
+              <div class="form-group mb-3">
+                <label for="presentationVideo">Please provide the Power Point Presentation /two-minute Product Video (YouTube URL):</label>
+                <input type="file" id="presentationVideo" name="presentationVideo" accept=".ppt,.pptx,mp4" class="form-control">
+                <div id="presentationVideoError" class="error"></div>
               </div>
               <div class="form-group mb-3">
                 <label for="technologyLevel">Stage Of Product based on minimum Technology Readiness Level:</label>
@@ -285,6 +290,11 @@ if (isset($_POST['problemStatementValue']) && !empty(trim($_POST['problemStateme
                   <option value="TRL3 Proof of Concept">TRL3 Proof of Concept</option>
                 </select>
                 <div id="technologyLevelError" class="error"></div>
+              </div>
+              <div class="form-group mb-3">
+                <label for="proofPoC">Proof for PoC (Picture):</label>
+                <input type="file" id="proofPoC" name="proofPoC" accept=".jpg,.jpeg,.png" class="form-control">
+                <div id="proofPoCError" class="error"></div>
               </div>
               <div class="form-group mb-3">
                 <label for="describeProduct">Describe how your solution or products classifies as a 5G and Beyond usecase. What are the challenges faced from connectivity solutions over 3G/4G:</label>
@@ -320,6 +330,11 @@ if (isset($_POST['problemStatementValue']) && !empty(trim($_POST['problemStateme
               <h5 class="text-white text-center p-2">Document Details</h5>
             </div>
             <div class="container">
+              <div class="form-group mb-3">
+                <label for="shareholding">51% shareholding by Indian citizen or Indian Entity (In case of Startups):</label>
+                <input type="file" id="shareholding" name="shareholding" class="form-control" accept=".pdf">
+                <div id="shareholdingError" class="error"></div>
+              </div>
               <div class="form-group mb-3">
                 <label for="incorporation">Incorporation Certificate (in case of Startups):</label>
                 <input type="file" id="incorporation" name="incorporation" class="form-control" accept=".pdf">
