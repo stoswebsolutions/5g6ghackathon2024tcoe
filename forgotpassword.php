@@ -22,9 +22,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql1 = "UPDATE users SET reset_token = '$token', reset_expiry = '$expiry' WHERE email = '$email' ";
         if ($conn->query($sql1) === TRUE) {
             // Send the reset email
-            $resetLink = "https://5g6g-hackathon2024.tcoe.in/reset_password.php?token=" . $token;
-            $subject = "Reset Your Password for the 5G/6G Hackathon";
-            // $message = "To reset your password, please click on the following link: " . $resetLink;
+            $user_name = $fullname;
+            $service_name = 'TCOE India';
+            $reset_link = "https://5g6g-hackathon2024.tcoe.in/reset_password.php?token=" . $token;
+            $company_name = 'TCOE India';
+            $contact_email = '5g6ghack24@tcoe.in';
+            $contact_number = '+91 84668-83949';
+            $sender_name = 'Deepak Boorla';
+
+            $subject = "Password Reset Request";
+
             $headers = "MIME-Version: 1.0" . "\r\n";
             $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
             $headers .= "From: 5g6ghack24@tcoe.in" . "\r\n";
@@ -32,22 +39,73 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $headers .= "X-Mailer: PHP/" . phpversion();
 
             $message = "
-        <html>
-        <head>
-        <title>Reset Your Password for the 5G/6G Hackathon</title>
-        </head>
-        <body>
-        <p>Dear {$fullname},</p>
-        <p>We received a request to reset your password for the <strong>5G/6G Hackathon</strong> platform. If you made this request, please click the link below to set a new password:</p>
-        <p><a href='{$resetLink}' style='color: #1a73e8;'>Reset Password</a></p>
-        <p>If the link above doesn't work, you can copy and paste the following URL into your browser:</p>
-        <p><a href='{$resetLink}' style='color: #1a73e8;'>{$resetLink}</a></p>
-        <br>
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Password Reset Request</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2, p {
+            color: #333333;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        .btn {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #777777;
+        }
+    </style>
+</head>
+<body>
+    <div class='email-container'>
+        <h2>Hi $user_name,</h2>
+        <p>
+            We received a request to reset your password for your <strong>$service_name</strong> account. Click the link below to reset your password:
+        </p>
+        <a href='$reset_link' class='btn'>Reset Password</a>
+        <p>
+            This link will expire in 24 hours. If you did not request a password reset, please ignore this email or contact our support team at <a href='mailto:$contact_email'>$contact_email</a> or call us at $contact_number.
+        </p>
         <p>Thank you,</p>
-        <p>Team – TCoE</p>
-        </body>
-        </html>
-        ";
+        <p><strong>$company_name</strong></p>
+
+        <footer>
+            <p>$company_name, Contact Information: <a href='mailto:$contact_email'>$contact_email</a></p>
+        </footer>
+    </div>
+</body>
+</html>
+";
 
             if (mail($email, $subject, $message, $headers)) {
                 echo "<script>alert('A password reset link has been sent to your email address.');</script>";

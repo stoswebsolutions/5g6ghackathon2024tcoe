@@ -1569,10 +1569,30 @@
               aria-labelledby="headingOne"
               data-bs-parent="#faqAccordion">
               <div class="accordion-body">
-                <span>
-                  A. Through the online portal -
-                  https://5g6g-hackathon2024.tcoe.in/
-                </span>
+                <span>A. Through the online portal - https://5g6g-hackathon2024.tcoe.in/. You can only apply.</span>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSeven">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseSeven"
+                aria-expanded="true"
+                aria-controls="collapseSeven">
+                <i class="fas fa-chevron-down accordion-icon"></i>
+                <span>Q. Can we participate in teams?</span>
+              </button>
+            </h2>
+            <div
+              id="collapseSeven"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingSeven"
+              data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                <span>A. Yes! You can form a team of up to 3 folks and participate in the event.</span>
               </div>
             </div>
           </div>
@@ -1586,7 +1606,7 @@
                 aria-expanded="false"
                 aria-controls="collapseTwo">
                 <i class="fas fa-chevron-down accordion-icon"></i>
-                <span>Q. What are the prizes to be won?</span>
+                <span>Q. What can I win?</span>
               </button>
             </h2>
             <div
@@ -1595,8 +1615,8 @@
               aria-labelledby="headingTwo"
               data-bs-parent="#faqAccordion">
               <div class="accordion-body">
+                <span>A. Winners will be awarded as below</span>
                 <ol>
-                  <li>Winners will be awarded as below</li>
                   <li>First Prize: INR. 2 Lakhs</li>
                   <li>Second Prize: INR. 1.5 Lakhs</li>
                   <li>Third Prize: INR. 1 Lakhs</li>
@@ -1606,7 +1626,7 @@
               </div>
             </div>
           </div>
-          <div class="accordion-item">
+          <!-- <div class="accordion-item">
             <h2 class="accordion-header" id="headingThree">
               <button
                 class="accordion-button collapsed"
@@ -1628,7 +1648,7 @@
                 <span>A. Only Online</span>
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingFour">
               <button
@@ -1639,7 +1659,7 @@
                 aria-expanded="false"
                 aria-controls="collapseFour">
                 <i class="fas fa-chevron-down accordion-icon"></i>
-                <span>Q. General information regarding Grand Finale</span>
+                <span>Q. When is IMC scheduled to happen this year?</span>
               </button>
             </h2>
             <div
@@ -1649,8 +1669,7 @@
               data-bs-parent="#faqAccordion">
               <div class="accordion-body">
                 <span>
-                  A. The event is tentatively scheduled for OCT 15, 2024, and
-                  the venue will be updated to the winners
+                  A. The event is tentatively scheduled for OCT 15, 2024, and the venue will be updated to the winners.
                 </span>
               </div>
             </div>
@@ -1665,8 +1684,7 @@
                 aria-expanded="false"
                 aria-controls="collapseFive">
                 <i class="fas fa-chevron-down accordion-icon"></i>
-                <span>Q. Is TRL Level 3/ POC and above stage of the product
-                  necessary to Apply?</span>
+                <span>Q. Is TRL Level3/POC and above stage of the product necessary to apply?</span>
               </button>
             </h2>
             <div
@@ -1689,10 +1707,7 @@
                 aria-expanded="false"
                 aria-controls="collapseSix">
                 <i class="fas fa-chevron-down accordion-icon"></i>
-                <span>Q. What type of document should Academic institutions
-                  (Professors students and any combination / team of theirs)
-                  upload in the (Applying as) section of the Application
-                  form?</span>
+                <span>Q. What type of documents should academic institutions (Professors, students in any combination/ teams) upload in the (Applying as) section of the application form?</span>
               </button>
             </h2>
             <div
@@ -1702,9 +1717,32 @@
               data-bs-parent="#faqAccordion">
               <div class="accordion-body">
                 <span>
-                  A. They are required to upload a letter regarding their
-                  solution that has been forwarded with the approval /
-                  consent of HoD / Director of that institution.
+                  A. They are required to upload a letter regarding their solution that has been forwarded with the approval / consent of HoD / Director of that institution.
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingEight">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseEight"
+                aria-expanded="false"
+                aria-controls="collapseEight">
+                <i class="fas fa-chevron-down accordion-icon"></i>
+                <span>Q. Whom can I reach out to in case of questions/issues?</span>
+              </button>
+            </h2>
+            <div
+              id="collapseEight"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingEight"
+              data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                <span>
+                  A. You can reach us at 5g6ghack24@tcoe.in or call us at +91 84668-83949(Deepak Boorla).
                 </span>
               </div>
             </div>

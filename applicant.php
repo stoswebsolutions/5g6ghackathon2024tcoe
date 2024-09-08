@@ -125,14 +125,18 @@ try {
     $sql1 = "INSERT INTO technical (domain, product, productFile, presentationVideo, technologyLevel, proofPoC, describeProduct, productPatent, patentDetails, similarProduct, similarProductFile, status, createAt, uniqueId, uniqueApplicant) VALUES ('$domain', '$product', '$productFilePath', '$presentationVideo', '$technologyLevel', '$proofPoCPath', '$describeProduct', '$productPatent', '$patentDetails', '$similarProduct', '$similarProductFilePath', '$status', '$createAt', '$uniqueId', '$uniqueApplicant')";
     $sql2 = "INSERT INTO documents (shareholding,incorporation, idProof, status, createAt, uniqueId, uniqueApplicant) VALUES ('$shareholding', '$incorporationPath', '$idProofPath', '$status', '$createAt', '$uniqueId', '$uniqueApplicant')";
     if ($conn->query($sql1) === TRUE && $conn->query($sql2) === TRUE) {
-      $to = $email;
-      $subject = 'Application Submission for 5G/6G Hackathon';
-      $organizerName = $organizationName;
-      $teamName = $applicantName;
-      $projectTitle = $problemsStatement;
-      $teamEmail = $email;
-      $teamPhone = $contactNumber;
 
+      $applicant_name = $applicant_name;
+      $hackathon_name = '5G Hackathon';
+      $sender_name = 'Deepak Boorla';
+      $sender_position = 'Organizer';
+      $organization_name = 'TCOE India';
+      $contact_email = '5g6ghack24@tcoe.in';
+      $contact_number = '+91 84668-83949';
+
+      $subject = "Your Hackathon Application Has Been Successfully Submitted!";
+
+      $to = $email;
       $headers = "MIME-Version: 1.0" . "\r\n";
       $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
       $headers .= "From: 5g6ghack24@tcoe.in" . "\r\n";
@@ -141,30 +145,80 @@ try {
 
       // Email body
       $message = "
-<html>
+<!DOCTYPE html>
+<html lang='en'>
 <head>
-  <title>Application Submission for 5G/6G Hackathon</title>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Your Hackathon Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333333;
+        }
+        p {
+            color: #555555;
+            line-height: 1.6;
+        }
+        .btn {
+            background-color: #28a745;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #218838;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #777777;
+        }
+    </style>
 </head>
 <body>
-  <p>Dear {$organizerName},</p>
-  <p>We are excited to submit our application for the <strong>5G/6G Hackathon</strong>.</p>
-  <p><strong>Team Details:</strong></p>
-  <ul>
-    <li><strong>Applicant Name:</strong> {$teamName}</li>
-    <li><strong>Problem Statement:</strong> {$projectTitle}</li>
-    <li><strong>Contact Information:</strong></li>
-    <ul>
-      <li><strong>Email:</strong> {$teamEmail}</li>
-      <li><strong>Phone:</strong> {$teamPhone}</li>
-    </ul>
-  </ul>
-  <p>We will let you know once your application gets shortlisted. Thank you for your patience.</p>
-  <br>
-  <p>Thank you,</p>
-  <p>Team – TCoE</p>
+    <div class='email-container'>
+        <h2>Hi $applicant_name,</h2>
+        <p>
+            Thank you for applying to the <strong>$hackathon_name</strong>! We are excited to inform you that your application has been successfully submitted.
+        </p>
+        <h3>Application Details:</h3>
+        <p>What's Next?</p>
+        <p>
+            Our team will review your application and notify you of the next steps via email. Please keep an eye on your inbox for updates. Meanwhile, if you’re interested in any of the other problem statements, please feel free to apply for that challenge as well!
+        </p>
+        <p>
+            If you have any questions or need further assistance, feel free to reach out to us at <a href='mailto:$contact_email'>$contact_email</a> or call us at $contact_number.
+        </p>
+        <p>We look forward to seeing your innovative ideas in action!</p>
+
+        <p>Best regards,</p>
+        <p><strong>$sender_name</strong><br>
+        $sender_position<br>
+        $organization_name</p>
+
+        <footer>
+            <p>$organization_name, Contact Information: <a href='mailto:$contact_email'>$contact_email</a></p>
+        </footer>
+    </div>
 </body>
 </html>
 ";
+
 
       if (mail($to, $subject, $message, $headers)) {
         echo "<script>alert('Application submission email sent successfully to {$organizerName}.');</script>";

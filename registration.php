@@ -30,10 +30,18 @@ try {
             }
         }
 
-        $participantName = $fullname;
+        $user_name = $fullname;
+        $hackathon_name = 'Hackathon 2024';
+        $username = $email;
+        $registration_date = $createAt;
+        $company_name = 'Hackathon Organization';
+        $contact_email = '5g6ghack24@tcoe.in';
+        $contact_number = '+91 84668-83949';
+        $sender_name = 'Deepak Boorla';
+
+        $subject = "Welcome to $hackathon_name!";
+
         $to = $email;
-        $subject = "Welcome to the 5G/6G Hackathon!";
-        // $message = "Hello" . $fullname . ",\r\n Your Access Code is " . $randomNumber;
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
         $headers .= "From: 5g6ghack24@tcoe.in" . "\r\n";
@@ -41,22 +49,83 @@ try {
         $headers .= "X-Mailer: PHP/" . phpversion();
 
         $message = "
-    <html>
-    <head>
-    <title>Welcome to the 5G/6G Hackathon!</title>
-    </head>
-    <body>
-    <p>Dear {$participantName},</p>
-    <p>Welcome aboard!</p>
-    <p>
-        Congratulations on registering for the <strong>5G/6G Hackathon</strong> managed by TCoE by DoT, MoC, GoI, a platform where innovation meets technology. We’re thrilled to have you join us in pushing the boundaries of 5G and 6G technologies.
-    </p>
-    <br>
-    <p>Thank you,</p>
-    <p>Team - TCoE</p>
-    </body>
-    </html>
-    ";
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Welcome to $hackathon_name</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2, p {
+            color: #333333;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        .btn {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #777777;
+        }
+    </style>
+</head>
+<body>
+    <div class='email-container'>
+        <h2>Hi $user_name,</h2>
+        <p>Welcome to <strong>$hackathon_name</strong>! We are excited to inform you that your registration was successful.</p>
+
+        <h3>Registration Details:</h3>
+        <p><strong>Username:</strong> $username</p>
+        <p><strong>Registration Date:</strong> $registration_date</p>
+
+        <p>You can now log in to the $hackathon_name portal and start exploring:</p>
+        <ul>
+            <li><strong>Apply for the event:</strong> Complete your application for at least one of the problem statements and participate in this exciting event.</li>
+            <li><strong>Access Resources:</strong> Find all the necessary resources and guidelines for the hackathon.</li>
+        </ul>
+
+        <p>If you have any questions or need assistance, feel free to reach out to us at <a href='mailto:$contact_email'>$contact_email</a> or call us at $contact_number.</p>
+
+        <p>Thank you for joining us. We look forward to seeing your innovative ideas and contributions!</p>
+
+        <p>Best regards,</p>
+        <p><strong>$sender_name</strong></p>
+        <p><strong>$company_name</strong></p>
+
+        <footer>
+            <p>$company_name, Contact Information: <a href='mailto:$contact_email'>$contact_email</a></p>
+        </footer>
+    </div>
+</body>
+</html>
+";
 
         // Send the email
         if (mail($to, $subject, $message, $headers)) {
