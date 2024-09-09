@@ -62,17 +62,24 @@ $uniqueId = $_SESSION['uniqueId'];
     </nav>
     <div class="container mt-0">
         <div class="row justify-content-center">
+            <?php
+            // SQL query to join all three tables based on 'uniqueApplicant'
+            $sql = "SELECT a.*, t.*, d.* FROM applicant a  JOIN technical t ON a.uniqueApplicant = t.uniqueApplicant  JOIN documents d ON a.uniqueApplicant = d.uniqueApplicant WHERE a.uniqueId = '$uniqueId'";
+            // Execute the query
+            $result = $conn->query($sql);
+            ?>
             <div class="col-lg-9 col-md-9">
+                <?php
+                if ($result->num_rows <= 0) {
+                    echo "<p style='color: rgb(141, 13, 130);'>Dear Participant, Seems you to apply for contest. Click Apply above & choose a Problem statement and complete the details. All the best!!!</p>";
+                }
+                ?>
             </div>
             <div class="col-lg-3 col-md-3">
                 <button type="button" id="psButton" class="btn btn-primary text-white">Apply More Problem Statements</button>
             </div>
             <div class="col-lg-6 col-md-6">
                 <?php
-                // SQL query to join all three tables based on 'uniqueApplicant'
-                $sql = "SELECT a.*, t.*, d.* FROM applicant a  JOIN technical t ON a.uniqueApplicant = t.uniqueApplicant  JOIN documents d ON a.uniqueApplicant = d.uniqueApplicant WHERE a.uniqueId = '$uniqueId'";
-                // Execute the query
-                $result = $conn->query($sql);
                 // Check if any records are found
                 if ($result->num_rows > 0) {
                     // Loop through each row (applicant)
@@ -349,8 +356,6 @@ $uniqueId = $_SESSION['uniqueId'];
                         <!-- Accordion structure ends -->
                 <?php
                     }
-                } else {
-                    echo "<p>No application data available.</p>";
                 }
                 ?>
             </div>

@@ -59,6 +59,9 @@
             <a class="nav-link" href="#contact">Contact Us</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link text-primary" href="https://bit.ly/WTSAoutreach" target="_blank">WTSA Registrations</a>
+          </li>
+          <li class="nav-item">
             <a
               class="nav-link"
               data-bs-toggle="modal"
@@ -95,6 +98,9 @@
               data-bs-toggle="modal"
               data-bs-target="#authModal"
               href="#login">Login</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link text-primary" href="https://bit.ly/WTSAoutreach" target="_blank">WTSA Registrations</a>
           </li>
           <li class="nav-item">
             <a
