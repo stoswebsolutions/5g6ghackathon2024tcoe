@@ -269,9 +269,14 @@ if (isset($_POST['problemStatementValue']) && !empty(trim($_POST['problemStateme
                 <div id="productFileError" class="error"></div>
               </div>
               <div class="form-group mb-3">
-                <label for="presentationVideo">Please provide the Power Point Presentation /two-minute Product Video (YouTube URL):</label>
+                <label for="presentationVideo">Please provide a Power Point Presentation /two-minute Product Video:</label>
                 <input type="file" id="presentationVideo" name="presentationVideo" accept=".ppt,.pptx,mp4" class="form-control">
                 <div id="presentationVideoError" class="error"></div>
+              </div>
+              <div class="form-group mb-3">
+                <label for="presentationURL">YouTube URL / LinkedIn URL:</label>
+                <input type="text" id="presentationURL" name="presentationURL" class="form-control">
+                <div id="presentationURLError" class="error"></div>
               </div>
               <div class="form-group mb-3">
                 <label for="technologyLevel">Stage Of Product based on minimum Technology Readiness Level:</label>
@@ -292,7 +297,7 @@ if (isset($_POST['problemStatementValue']) && !empty(trim($_POST['problemStateme
                 <div id="technologyLevelError" class="error"></div>
               </div>
               <div class="form-group mb-3">
-                <label for="proofPoC">Proof for PoC (Picture):</label>
+                <label for="proofPoC">Proof of Concept :</label>
                 <input type="file" id="proofPoC" name="proofPoC" accept=".jpg,.jpeg,.png" class="form-control">
                 <div id="proofPoCError" class="error"></div>
               </div>
@@ -302,23 +307,23 @@ if (isset($_POST['problemStatementValue']) && !empty(trim($_POST['problemStateme
                 <div id="describeProductError" class="error"></div>
               </div>
               <div class="form-group mb-3">
-                <label for="productPatent">Have you filed a patent for your product/solution:</label>
-                <input type="radio" id="productPatentYes" name="productPatent" value="Yes" checked> Yes
-                <input type="radio" id="productPatentNo" name="productPatent" value="No"> No
+                <label for="productPatent"><span style="color: red">*</span>Have you filed a patent for your product/solution:</label>
+                <input type="radio" id="productPatentYes" name="productPatent" value="Yes"> Yes
+                <input type="radio" id="productPatentNo" name="productPatent" value="No" checked> No
                 <div id="productPatentError" class="error"></div>
               </div>
-              <div class="form-group mb-3" id="patentDetailsId" style="display: block;">
+              <div class="form-group mb-3" id="patentDetailsId" style="display: none;">
                 <label for="patentDetails">If yes, please provide details:</label>
                 <textarea id="patentDetails" name="patentDetails" class="form-control"></textarea>
                 <div id="patentDetailsError" class="error"></div>
               </div>
               <div class="form-group mb-3">
-                <label for="similarProduct">Is there any similar product/ solution available in the market w.r.t your solution?:</label><br>
-                <input type="radio" id="similarProductYes" name="similarProduct" value="Yes" checked> Yes
-                <input type="radio" id="similarProductNo" name="similarProduct" value="No"> No
+                <label for="similarProduct"><span style="color: red">*</span>Is there any similar product/ solution available in the market w.r.t your solution?:</label><br>
+                <input type="radio" id="similarProductYes" name="similarProduct" value="Yes"> Yes
+                <input type="radio" id="similarProductNo" name="similarProduct" value="No" checked> No
                 <div id="similarProductError" class="error"></div>
               </div>
-              <div class="form-group mb-3" id="similarProductFileId" style="display: block;">
+              <div class="form-group mb-3" id="similarProductFileId" style="display: none;">
                 <label for="similarProductFile">If yes, does your proposed product have advantage over other existing solutions:</label>
                 <input type="file" id="similarProductFile" name="similarProductFile" class="form-control" accept=".pdf,.ppt,.pptx">
                 <div id="similarProductFileError" class="error"></div>

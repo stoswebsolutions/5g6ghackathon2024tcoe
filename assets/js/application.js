@@ -5,11 +5,16 @@ var patentDetailsId = document.getElementById("patentDetailsId");
 productPatentYes.addEventListener("change", function () {
   if (productPatentYes.checked) {
     patentDetailsId.style.display = "block";
+    document.getElementById("patentDetails").required = true;
+    document.getElementById("patentDetailsError").innerText =
+      "Please enter a valid Patent Details";
   }
 });
 productPatentNo.addEventListener("change", function () {
   if (productPatentNo.checked) {
     patentDetailsId.style.display = "none";
+    document.getElementById("patentDetails").required = false;
+    document.getElementById("patentDetailsError").innerText = "";
   }
 });
 
@@ -20,11 +25,16 @@ var similarProductFileId = document.getElementById("similarProductFileId");
 similarProductYes.addEventListener("change", function () {
   if (similarProductYes.checked) {
     similarProductFileId.style.display = "block";
+    document.getElementById("similarProductFile").required = true;
+    document.getElementById("similarProductFileError").innerText =
+      "Please enter a valid Patent Details";
   }
 });
 similarProductNo.addEventListener("change", function () {
   if (similarProductNo.checked) {
     similarProductFileId.style.display = "none";
+    document.getElementById("similarProductFile").required = false;
+    document.getElementById("similarProductFileError").innerText = "";
   }
 });
 
@@ -107,7 +117,7 @@ function validateForm() {
     incorporation: ["pdf"],
     idProof: ["pdf"],
   };
-  const maxSizeMB = 10;
+  const maxSizeMB = 3;
 
   for (let key in fileInputs) {
     const fileInput = document.forms["applicationForm"][key];
@@ -126,7 +136,7 @@ function validateForm() {
       // Check file size
       if (fileSizeMB > maxSizeMB) {
         document.getElementById(key + "Error").innerText =
-          "File size exceeds 10MB. Please upload a smaller file.";
+          "File size exceeds 3MB. Please upload a smaller file.";
         valid = false;
       }
     }

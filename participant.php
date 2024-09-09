@@ -1524,7 +1524,7 @@ if (!isset($_SESSION['uniqueId'])) {
               aria-labelledby="headingOne"
               data-bs-parent="#faqAccordion">
               <div class="accordion-body">
-                <span>A. Through the online portal - https://5g6g-hackathon2024.tcoe.in/. You can only apply.</span>
+                <span>A. Through the online portal - https://5g6g-hackathon2024.tcoe.in/. You can apply online only.</span>
               </div>
             </div>
           </div>
@@ -1742,20 +1742,32 @@ if (!isset($_SESSION['uniqueId'])) {
       </div>
     </section>
     <footer class="py-4">
-      <div class="container-fluid text-center">
-        <div
-          class="d-flex justify-content-between align-items-center flex-column flex-md-row">
-          <p class="mb-0">
-            &copy; 2024 Powered by theaischool. All Rights Reserved
-          </p>
-          <div class="social-media-icons mb-2 mb-md-0">
-            <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
-            <a href="#" class=""><i class="fab fa-linkedin-in"></i></a>
+      <div class="container-fluid">
+        <div class="row text-center">
+          <div class="col-md-2">
+            <a class="navbar-brand p-0" href="#">
+              <img
+                src="assets/images/theaischoollogo.jpg"
+                class="w-25" alt="" />
+            </a>
           </div>
-          <div class="footer-links">
-            <a href="#" class="mx-2">Platform Guide</a> |
-            <a href="#" class="mx-2">Privacy Policy</a>
+          <div class="col-md-5">
+            <p class="mb-0">
+              &copy; 2024 Powered by <a href="https://theaischool.co.in/" target="new">TheAISCHOOL</a> All Rights Reserved
+            </p>
+          </div>
+          <!-- <div class="col-md-2">
+            <div class="social-media-icons mb-2 mb-md-0">
+              <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/company/theaischool/" target="new" class=""><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div> -->
+          <div class="col-md-5">
+            <div class="footer-links">
+              <a href="https://docs.google.com/document/d/1XBzH-bCkSwC2uLHXwicYEwX9KL-5RHpKF3qMASycZwI/edit" target="_new" class="mx-2">Terms and Conditions</a> |
+              <a href="https://www.termsfeed.com/live/04e158e3-c7b3-4e59-8ff3-410f4e626060" target="_new" class="mx-2">Privacy Policy</a>
+            </div>
           </div>
         </div>
       </div>

@@ -17,13 +17,11 @@ $uniqueId = $_SESSION['uniqueId'];
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
         rel="stylesheet" />
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/applicantView.css" />
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <a class="navbar-brand p-0" href="participant">
             <img
@@ -65,239 +63,299 @@ $uniqueId = $_SESSION['uniqueId'];
     <div class="container mt-0">
         <div class="row justify-content-center">
             <div class="col-lg-9 col-md-9">
-                
             </div>
             <div class="col-lg-3 col-md-3">
                 <button type="button" id="psButton" class="btn btn-primary text-white">Apply More Problem Statements</button>
             </div>
             <div class="col-lg-6 col-md-6">
                 <?php
-                $sql = "SELECT a.*,t.*,d.* FROM applicant a JOIN technical t ON a.uniqueApplicant = t.uniqueApplicant JOIN documents d ON a.uniqueApplicant = d.uniqueApplicant WHERE a.uniqueId = '$uniqueId' ";
+                // SQL query to join all three tables based on 'uniqueApplicant'
+                $sql = "SELECT a.*, t.*, d.* FROM applicant a  JOIN technical t ON a.uniqueApplicant = t.uniqueApplicant  JOIN documents d ON a.uniqueApplicant = d.uniqueApplicant WHERE a.uniqueId = '$uniqueId'";
+                // Execute the query
                 $result = $conn->query($sql);
+                // Check if any records are found
                 if ($result->num_rows > 0) {
+                    // Loop through each row (applicant)
                     while ($row = $result->fetch_assoc()) {
                 ?>
-                        <h5 class="text-center mt-5" style="color: #890989;">Application: <?= $row['problemsStatement'] ?></h5>
+                        <!-- Display Problem Statement as header -->
+                        <h5 class="text-center mt-5" style="color: #890989;">Application: <?= htmlspecialchars($row['problemsStatement']) ?></h5>
+                        <!-- Accordion structure starts -->
                         <div class="accordion" id="applicationAccordion">
-                            <!-- Application Data -->
+                            <!-- Application Data Accordion -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne<?= $row['uniqueApplicant'] ?>">
-                                    <button
-                                        class="accordion-button"
-                                        type="button"
-                                        data-bs-toggle="collapse"
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne<?= $row['uniqueApplicant'] ?>"
-                                        aria-expanded="true"
-                                        aria-controls="collapseOne<?= $row['uniqueApplicant'] ?>">
+                                        aria-expanded="true" aria-controls="collapseOne<?= $row['uniqueApplicant'] ?>">
                                         Application Data
                                     </button>
                                 </h2>
-                                <div
-                                    id="collapseOne<?= $row['uniqueApplicant'] ?>"
+                                <div id="collapseOne<?= $row['uniqueApplicant'] ?>"
                                     class="accordion-collapse collapse show"
                                     aria-labelledby="headingOne<?= $row['uniqueApplicant'] ?>"
                                     data-bs-parent="#applicationAccordion">
                                     <div class="accordion-body">
-                                        <div class="row mb-2">
-                                            <div class="col-6">
+                                        <!-- Application Data with validation -->
+                                        <?php if (!empty($row['applicantName'])): ?>
+                                            <div class="row mb-2">
                                                 <div class="col-6"><label class="h5">Name</label></div>
                                                 <div class="col-6">
-                                                    <p><?= $row['applicantName'] ?></p>
+                                                    <p><?= htmlspecialchars($row['applicantName']) ?></p>
                                                 </div>
                                             </div>
-                                            <div class="col-6">
+                                        <?php endif; ?>
+                                        <?php if (!empty($row['email'])): ?>
+                                            <div class="row mb-2">
                                                 <div class="col-6"><label class="h5">Email</label></div>
                                                 <div class="col-6">
-                                                    <p><?= $row['email'] ?></p>
+                                                    <p><?= htmlspecialchars($row['email']) ?></p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class="col-6">
+                                        <?php endif; ?>
+                                        <?php if (!empty($row['contactNumber'])): ?>
+                                            <div class="row mb-2">
                                                 <div class="col-6"><label class="h5">Phone</label></div>
                                                 <div class="col-6">
-                                                    <p><?= $row['contactNumber'] ?></p>
+                                                    <p><?= htmlspecialchars($row['contactNumber']) ?></p>
                                                 </div>
                                             </div>
-                                            <div class="col-6">
+                                        <?php endif; ?>
+                                        <?php if (!empty($row['organizationName'])): ?>
+                                            <div class="row mb-2">
                                                 <div class="col-6"><label class="h5">Organization</label></div>
                                                 <div class="col-6">
-                                                    <p><?= $row['organizationName'] ?></p>
+                                                    <p><?= htmlspecialchars($row['organizationName']) ?></p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class="col-12">
+                                        <?php endif; ?>
+                                        <?php if (!empty($row['postalAddress']) || !empty($row['city']) || !empty($row['state'])): ?>
+                                            <div class="row mb-2">
                                                 <div class="col-12"><label class="h5">Postal Address</label></div>
                                                 <div class="col-12">
-                                                    <p><?= $row['postalAddress'] ?><br>
-                                                        <?= $row['city'] ?>-<?= $row['state'] ?></p>
+                                                    <p><?= htmlspecialchars($row['postalAddress']) ?>,
+                                                        <?= htmlspecialchars($row['city']) ?> - <?= htmlspecialchars($row['state']) ?></p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class="col-6">
+                                        <?php endif; ?>
+                                        <?php if (!empty($row['category'])): ?>
+                                            <div class="row mb-2">
+                                                <div class="col-6"><label class="h5">Category</label></div>
+                                                <div class="col-6">
+                                                    <p><?= htmlspecialchars($row['category']) ?></p>
+                                                </div>
+                                            </div>
+                                        <?php endif; ?>
+                                        <?php if (!empty($row['applying'])): ?>
+                                            <div class="row mb-2">
                                                 <div class="col-6"><label class="h5">Applying For</label></div>
                                                 <div class="col-6">
-                                                    <p><?= $row['applying'] ?></p>
+                                                    <p><?= htmlspecialchars($row['applying']) ?></p>
                                                 </div>
                                             </div>
-                                            <div class="col-6">
+                                        <?php endif; ?>
+                                        <?php if (!empty($row['industry'])): ?>
+                                            <div class="row mb-2">
                                                 <div class="col-6"><label class="h5">Industry</label></div>
                                                 <div class="col-6">
-                                                    <p><?= $row['industry'] ?></p>
+                                                    <p><?= htmlspecialchars($row['industry']) ?></p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class="col-6">
-                                                <div class="col-6"><label class="h5">Industry Vertical</label></div>
+                                        <?php endif; ?>
+                                        <?php if (!empty($row['otherindustry'])): ?>
+                                            <div class="row mb-2">
+                                                <div class="col-6"><label class="h5">Other Industry</label></div>
                                                 <div class="col-6">
-                                                    <p>Environment</p>
+                                                    <p><?= htmlspecialchars($row['otherindustry']) ?></p>
                                                 </div>
                                             </div>
-                                            <div class="col-6">
+                                        <?php endif; ?>
+                                        <?php if (!empty($row['applicationVerticals'])): ?>
+                                            <div class="row mb-2">
+                                                <div class="col-6"><label class="h5">Other Industry Vertical</label></div>
+                                                <div class="col-6">
+                                                    <p><?= htmlspecialchars($row['applicationVerticals']) ?></p>
+                                                </div>
+                                            </div>
+                                        <?php endif; ?>
+                                        <?php if (!empty($row['website'])): ?>
+                                            <div class="row mb-2">
                                                 <div class="col-6"><label class="h5">Website</label></div>
                                                 <div class="col-6">
-                                                    <p><?= $row['website'] ?></p>
+                                                    <p><?= htmlspecialchars($row['website']) ?></p>
                                                 </div>
                                             </div>
-                                        </div>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Technical Data -->
+                            <!-- Technical Data Accordion -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingTwo<?= $row['uniqueApplicant'] ?>">
-                                    <button
-                                        class="accordion-button collapsed"
-                                        type="button"
-                                        data-bs-toggle="collapse"
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseTwo<?= $row['uniqueApplicant'] ?>"
-                                        aria-expanded="false"
-                                        aria-controls="collapseTwo<?= $row['uniqueApplicant'] ?>">
+                                        aria-expanded="false" aria-controls="collapseTwo<?= $row['uniqueApplicant'] ?>">
                                         Technical Data
                                     </button>
                                 </h2>
-                                <div
-                                    id="collapseTwo<?= $row['uniqueApplicant'] ?>"
+                                <div id="collapseTwo<?= $row['uniqueApplicant'] ?>"
                                     class="accordion-collapse collapse"
                                     aria-labelledby="headingTwo<?= $row['uniqueApplicant'] ?>"
                                     data-bs-parent="#applicationAccordion">
                                     <div class="accordion-body">
-                                        <div class="row mb-2">
-                                            <div class=""><label class="h5">Domain</label></div>
-                                            <div class="">
-                                                <p><?= $row['domain'] ?></p>
+                                        <!-- Technical Data with validation -->
+                                        <?php if (!empty($row['domain'])): ?>
+                                            <div class="row mb-2">
+                                                <div class=""><label class="h5">Domain</label></div>
+                                                <div class="">
+                                                    <p><?= htmlspecialchars($row['domain']) ?></p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class=""><label class="h5">Brief about your product/solution</label></div>
-                                            <div class="">
-                                                <p><?= $row['product'] ?></p>
+                                        <?php endif; ?>
+                                        <?php if (!empty($row['product'])): ?>
+                                            <div class="row mb-2">
+                                                <div class=""><label class="h5">Product/Solution</label></div>
+                                                <div class="">
+                                                    <p><?= htmlspecialchars($row['product']) ?></p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class=""><label class="h5">Technical Details or Product/Solution</label></div>
-                                            <div class="">
-                                                <p><a href="<?= $row['productFile'] ?>" target="_new" class="text-decoration-none"><?= $row['productFile'] ?></a></p>
+                                        <?php endif; ?>
+                                        <?php if (!empty($row['productFile'])): ?>
+                                            <div class="row mb-2">
+                                                <div class=""><label class="h5">Product File</label></div>
+                                                <div class="">
+                                                    <p><a href="https://5g6g-hackathon2024.tcoe.in/<?= htmlspecialchars($row['productFile']) ?>" target="_blank">Click Here</a></p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class=""><label class="h5">Technology Readiness Level</label></div>
-                                            <div class="">
-                                                <p><?= $row['technologyLevel'] ?></p>
+                                        <?php endif; ?>
+                                        <?php if (!empty($row['presentationVideo'])): ?>
+                                            <div class="row mb-2">
+                                                <div class=""><label class="h5">Power Point Presentation /two-minute Product Video</label></div>
+                                                <div class="">
+                                                    <p><a href="https://5g6g-hackathon2024.tcoe.in/<?= htmlspecialchars($row['presentationVideo']) ?>" target="_blank">Click Here</a></p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class=""><label class="h5">Proof of POC</label></div>
-                                            <div class="">
-                                                <p><?= $row['proofPoC'] ?></p>
+                                        <?php endif; ?>
+                                        <?php if (!empty($row['presentationURL'])): ?>
+                                            <div class="row mb-2">
+                                                <div class=""><label class="h5">YouTube URL / LinkedIn URL</label></div>
+                                                <div class="">
+                                                    <p><a href="https://5g6g-hackathon2024.tcoe.in/<?= htmlspecialchars($row['presentationURL']) ?>" target="_blank">Click Here</a></p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class=""><label class="h5">Describe Solution</label></div>
-                                            <div class="">
-                                                <p><?= $row['describeProduct'] ?></p>
+                                        <?php endif; ?>
+                                        <?php if (!empty($row['technologyLevel'])): ?>
+                                            <div class="row mb-2">
+                                                <div class=""><label class="h5">Technology Level</label></div>
+                                                <div class="">
+                                                    <p><?= htmlspecialchars($row['technologyLevel']) ?></p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class=""><label class="h5">Patent Filed</label></div>
-                                            <div class="">
-                                                <p><?= $row['productPatent'] ?></p>
+                                        <?php endif; ?>
+                                        <?php if (!empty($row['proofPoC'])): ?>
+                                            <div class="row mb-2">
+                                                <div class=""><label class="h5">Proof of Concept</label></div>
+                                                <div class="">
+                                                    <p><a href="https://5g6g-hackathon2024.tcoe.in/<?= htmlspecialchars($row['proofPoC']) ?>" target="_blank">Click Here</a></p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class=""><label class="h5">Patent Details</label></div>
-                                            <div class="">
-                                                <p><?= $row['patentDetails'] ?></p>
+                                        <?php endif; ?>
+                                        <?php if (!empty($row['describeProduct'])): ?>
+                                            <div class="row mb-2">
+                                                <div class=""><label class="h5">Describe Product</label></div>
+                                                <div class="">
+                                                    <p><?= htmlspecialchars($row['describeProduct']) ?></p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class=""><label class="h5">Similar Product</label></div>
-                                            <div class="">
-                                                <p><?= $row['similarProduct'] ?></p>
+                                        <?php endif; ?>
+                                        <?php if (!empty($row['productPatent'])): ?>
+                                            <div class="row mb-2">
+                                                <div class=""><label class="h5">Patent Filed</label></div>
+                                                <div class="">
+                                                    <p><?= htmlspecialchars($row['productPatent']) ?></p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class=""><label class="h5">Similar Product Details</label></div>
-                                            <div class="">
-                                                <p><a href="<?= $row['similarProductFile'] ?>" target="_new" class="text-decoration-none"><?= $row['similarProductFile'] ?></a></p>
+                                        <?php endif; ?>
+                                        <?php if (!empty($row['patentDetails'])): ?>
+                                            <div class="row mb-2">
+                                                <div class=""><label class="h5">Patent Details</label></div>
+                                                <div class="">
+                                                    <p><?= htmlspecialchars($row['patentDetails']) ?></p>
+                                                </div>
                                             </div>
-                                        </div>
+                                        <?php endif; ?>
+                                        <?php if (!empty($row['similarProduct'])): ?>
+                                            <div class="row mb-2">
+                                                <div class=""><label class="h5">Similar Product</label></div>
+                                                <div class="">
+                                                    <p><?= htmlspecialchars($row['similarProduct']) ?></p>
+                                                </div>
+                                            </div>
+                                        <?php endif; ?>
+                                        <?php if (!empty($row['similarProductFile'])): ?>
+                                            <div class="row mb-2">
+                                                <div class=""><label class="h5">Similar Product File</label></div>
+                                                <div class="">
+                                                    <p><a href="https://5g6g-hackathon2024.tcoe.in/<?= htmlspecialchars($row['similarProductFile']) ?>" target="_blank">Click Here</a></p>
+                                                </div>
+                                            </div>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Document Data -->
+                            <!-- Document Data Accordion -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingThree<?= $row['uniqueApplicant'] ?>">
-                                    <button
-                                        class="accordion-button collapsed"
-                                        type="button"
-                                        data-bs-toggle="collapse"
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseThree<?= $row['uniqueApplicant'] ?>"
-                                        aria-expanded="false"
-                                        aria-controls="collapseThree<?= $row['uniqueApplicant'] ?>">
+                                        aria-expanded="false" aria-controls="collapseThree<?= $row['uniqueApplicant'] ?>">
                                         Document Data
                                     </button>
                                 </h2>
-                                <div
-                                    id="collapseThree<?= $row['uniqueApplicant'] ?>"
+                                <div id="collapseThree<?= $row['uniqueApplicant'] ?>"
                                     class="accordion-collapse collapse"
                                     aria-labelledby="headingThree<?= $row['uniqueApplicant'] ?>"
                                     data-bs-parent="#applicationAccordion">
                                     <div class="accordion-body">
-                                        <div class="row mb-2">
-                                            <div class="">
-                                                <a href="<?= $row['shareholding'] ?>" target="_new" class="text-decoration-none h5">51% shareholding by Indian citizen</a>
+                                        <!-- Document Data with validation -->
+                                        <?php if (!empty($row['shareholding'])): ?>
+                                            <div class="row mb-2">
+                                                <div class=""><label class="h5">Shareholding Document</label></div>
+                                                <div class="">
+                                                    <p><a href="https://5g6g-hackathon2024.tcoe.in/<?= htmlspecialchars($row['shareholding']) ?>" target="_blank">Click Here</a></p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class="">
-                                                <a href="<?= $row['incorporation'] ?>" target="_new" class="text-decoration-none h5">Incorporation Certificate</a>
+                                        <?php endif; ?>
+                                        <?php if (!empty($row['incorporation'])): ?>
+                                            <div class="row mb-2">
+                                                <div class=""><label class="h5">Incorporation Certificate</label></div>
+                                                <div class="">
+                                                    <p><a href="https://5g6g-hackathon2024.tcoe.in/<?= htmlspecialchars($row['incorporation']) ?>" target="_blank">Click Here</a></p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class="">
-                                                <a href="<?= $row['idProof'] ?>" target="_new" class="text-decoration-none h5">ID Proof/ Passport</a>
+                                        <?php endif; ?>
+                                        <?php if (!empty($row['idProof'])): ?>
+                                            <div class="row mb-2">
+                                                <div class=""><label class="h5">ID Proof</label></div>
+                                                <div class="">
+                                                    <p><a href="https://5g6g-hackathon2024.tcoe.in/<?= htmlspecialchars($row['idProof']) ?>" target="_blank">Click Here</a></p>
+                                                </div>
                                             </div>
-                                        </div>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    <?php
+                        <!-- Accordion structure ends -->
+                <?php
                     }
                 } else {
-                    ?>
-                    <h6 class="p-1" style="background-color: rgb(137, 9, 137);color:#fff;">Still you didn't Submit any Problem Statement. Click Apply Button</h6>
-                <?php
+                    echo "<p>No application data available.</p>";
                 }
                 ?>
             </div>
         </div>
     </div>
-
     <script>
         var psButton = document.getElementById("psButton");
         psButton.addEventListener("click", function() {
@@ -305,7 +363,6 @@ $uniqueId = $_SESSION['uniqueId'];
             window.location.href = 'problem-statements';
         });
     </script>
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

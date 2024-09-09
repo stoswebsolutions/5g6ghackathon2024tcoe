@@ -162,13 +162,14 @@
       </div>
     </section>
     <!-- Problem Statements Section -->
-    <div class="container-fluid text-center my-3" id="problemstatements">
-      <div class="d-flex justify-content-around text-center mb-5">
-        <h2></h2>
-        <h2 class="section-heading">Problem Statements</h2>
-        <a href="problemstatements" class="text-decoration-none">View All</a>
+    <div class="container-fluid my-3" id="problemstatements">
+      <div class="row container">
+        <div class="col-md-6">
+          <h2 class="float-end section-heading">Problem&nbsp;Statements</h2>
+        </div>
+        <div class="col-md-6"><a href="problemstatements" class="float-end text-decoration-none">View&nbsp;All</a></div>
       </div>
-      <div class="row mx-auto my-auto justify-content-center">
+      <div class="row container-fluid">
         <div id="recipeCarousel1" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner" role="listbox">
             <!-- Carousel items for Section 1 -->
@@ -1569,7 +1570,7 @@
               aria-labelledby="headingOne"
               data-bs-parent="#faqAccordion">
               <div class="accordion-body">
-                <span>A. Through the online portal - https://5g6g-hackathon2024.tcoe.in/. You can only apply.</span>
+                <span>A. Through the online portal - https://5g6g-hackathon2024.tcoe.in/. You can apply online only.</span>
               </div>
             </div>
           </div>
@@ -1798,17 +1799,17 @@
               &copy; 2024 Powered by <a href="https://theaischool.co.in/" target="new">TheAISCHOOL</a> All Rights Reserved
             </p>
           </div>
-          <div class="col-md-2">
+          <!-- <div class="col-md-2">
             <div class="social-media-icons mb-2 mb-md-0">
               <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
               <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
               <a href="https://www.linkedin.com/company/theaischool/" target="new" class=""><i class="fab fa-linkedin-in"></i></a>
             </div>
-          </div>
-          <div class="col-md-3">
+          </div> -->
+          <div class="col-md-5">
             <div class="footer-links">
-              <a href="#" class="mx-2">Terms and Conditions</a> |
-              <a href="#" class="mx-2">Privacy Policy</a>
+              <a href="https://docs.google.com/document/d/1XBzH-bCkSwC2uLHXwicYEwX9KL-5RHpKF3qMASycZwI/edit" target="_new" class="mx-2">Terms and Conditions</a> |
+              <a href="https://www.termsfeed.com/live/04e158e3-c7b3-4e59-8ff3-410f4e626060" target="_new" class="mx-2">Privacy Policy</a>
             </div>
           </div>
         </div>

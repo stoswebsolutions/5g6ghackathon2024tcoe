@@ -35,6 +35,7 @@ $website = isset($_POST['website']) ? validate_input($_POST['website']) : '';
 
 $domain = isset($_POST['domain']) ? validate_input($_POST['domain']) : '';
 $product = isset($_POST['product']) ? validate_input($_POST['product']) : '';
+$presentationURL = isset($_POST['presentationURL']) ? validate_input($_POST['presentationURL']) : '';
 $technologyLevel = validate_input($_POST['technologyLevel']);
 $describeProduct = isset($_POST['describeProduct']) ? validate_input($_POST['describeProduct']) : '';
 $productPatent = validate_input($_POST['productPatent']);
@@ -122,7 +123,7 @@ try {
         VALUES ('$applicantName', '$organizationName', '$contactNumber', '$email', '$city', '$state', '$postalAddress', '$category', '$applying', '$industry', '$otherindustry', '$problemsStatement', '$applicationVerticals', '$website', '$status', '$createAt', '$uniqueId')";
   if ($conn->query($sql) === TRUE) {
     $uniqueApplicant = $conn->insert_id;
-    $sql1 = "INSERT INTO technical (domain, product, productFile, presentationVideo, technologyLevel, proofPoC, describeProduct, productPatent, patentDetails, similarProduct, similarProductFile, status, createAt, uniqueId, uniqueApplicant) VALUES ('$domain', '$product', '$productFilePath', '$presentationVideo', '$technologyLevel', '$proofPoCPath', '$describeProduct', '$productPatent', '$patentDetails', '$similarProduct', '$similarProductFilePath', '$status', '$createAt', '$uniqueId', '$uniqueApplicant')";
+    $sql1 = "INSERT INTO technical (domain, product, productFile, presentationVideo, presentationURL, technologyLevel, proofPoC, describeProduct, productPatent, patentDetails, similarProduct, similarProductFile, status, createAt, uniqueId, uniqueApplicant) VALUES ('$domain', '$product', '$productFilePath', '$presentationVideo', '$presentationURL', '$technologyLevel', '$proofPoCPath', '$describeProduct', '$productPatent', '$patentDetails', '$similarProduct', '$similarProductFilePath', '$status', '$createAt', '$uniqueId', '$uniqueApplicant')";
     $sql2 = "INSERT INTO documents (shareholding,incorporation, idProof, status, createAt, uniqueId, uniqueApplicant) VALUES ('$shareholding', '$incorporationPath', '$idProofPath', '$status', '$createAt', '$uniqueId', '$uniqueApplicant')";
     if ($conn->query($sql1) === TRUE && $conn->query($sql2) === TRUE) {
 

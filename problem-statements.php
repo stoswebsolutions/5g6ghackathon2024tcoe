@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/profile.css" />
+    <link rel="stylesheet" href="assets/css/problemstatements.css" />
 </head>
 
 <body>
@@ -19,7 +19,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
             <a class="navbar-brand p-0" href="participant">
                 <img
-                    src="assets/images/Tcoe_logo.jpg"
+                    src="./assets/images/Tcoe_logo.jpg"
                     class="logo ms-5 p-0"
                     alt="" />
             </a>
@@ -32,8 +32,24 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="participant">Home</a>
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="profileDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-person-circle" style="font-size: 2rem"></i>
+                        </a>
+                        <ul
+                            class="dropdown-menu dropdown-menu-end"
+                            aria-labelledby="profileDropdown">
+                            <li><a class="dropdown-item" href="participant">Home</a></li>
+                            <li><a class="dropdown-item" href="profile">Profile</a></li>
+                            <li><a class="dropdown-item" href="applicantView">My Application</a></li>
+                            <li><a class="dropdown-item" href="logout">Logout</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -53,7 +69,24 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="participant">Home</a>
+                        <a
+                            class="nav-link"
+                            href="participant">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="applicantView">My Application</a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="applicantView">Logout</a>
                     </li>
                 </ul>
             </div>
