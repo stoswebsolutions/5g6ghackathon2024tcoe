@@ -67,7 +67,7 @@
                             <tr>
                                 <th>No.</th>
                                 <th class="w-50">Problem&nbsp;Statement</th>
-                                <th>Image</th>
+                                <!-- <th>Image</th> -->
                                 <th></th>
                                 <th></th>
                             </tr>
@@ -76,7 +76,7 @@
                             <tr>
                                 <td>1</td>
                                 <td>All Other areas (Suo Moto)</td>
-                                <td><img src="assets/images/suo_moto.png" class="img-fluid w-25" alt="All Other areas (Suo Moto)" /></td>
+                                <!-- <td><img src="assets/images/suo_moto.png" class="img-fluid w-25" alt="All Other areas (Suo Moto)" /></td> -->
                                 <th> <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#applyModal">
                                         Apply&nbsp;Now
@@ -87,7 +87,7 @@
                             <tr>
                                 <td>2</td>
                                 <td>AI-Driven Network Maintenance</td>
-                                <td><img src="assets/images/ai_driven.png" class="img-fluid w-25" alt="AI-Driven Network Maintenance" /></td>
+                                <!-- <td><img src="assets/images/ai_driven.png" class="img-fluid w-25" alt="AI-Driven Network Maintenance" /></td> -->
                                 <th> <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#applyModal">
                                         Apply&nbsp;Now
@@ -98,7 +98,7 @@
                             <tr>
                                 <td>3</td>
                                 <td>Multi-Modal Interactive System</td>
-                                <td><img src="assets/images/multi_model.png" class="img-fluid w-25" alt="Multi-Modal Interactive System" /></td>
+                                <!-- <td><img src="assets/images/multi_model.png" class="img-fluid w-25" alt="Multi-Modal Interactive System" /></td> -->
                                 <th> <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#applyModal">
                                         Apply&nbsp;Now
@@ -109,7 +109,7 @@
                             <tr>
                                 <td>4</td>
                                 <td>5G Kiosk</td>
-                                <td><img src="assets/images/5g_kiosk.jpg" class="img-fluid w-25" alt="5G Kiosk" /></td>
+                                <!-- <td><img src="assets/images/5g_kiosk.jpg" class="img-fluid w-25" alt="5G Kiosk" /></td> -->
                                 <th> <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#applyModal">
                                         Apply&nbsp;Now
@@ -120,7 +120,7 @@
                             <tr>
                                 <td>5</td>
                                 <td>5G Enabled Consoles/Devices</td>
-                                <td><img src="assets/images/5g_enabled.png" class="img-fluid w-25" alt="5G Enabled Consoles/Devices" /></td>
+                                <!-- <td><img src="assets/images/5g_enabled.png" class="img-fluid w-25" alt="5G Enabled Consoles/Devices" /></td> -->
                                 <th> <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#applyModal">
                                         Apply&nbsp;Now
@@ -131,7 +131,7 @@
                             <tr>
                                 <td>6</td>
                                 <td>Real Time Control Of Advanced Drones</td>
-                                <td><img src="assets/images/realtime_control.png" class="img-fluid w-25" alt="Real Time Control Of Advanced Drones" /></td>
+                                <!-- <td><img src="assets/images/realtime_control.png" class="img-fluid w-25" alt="Real Time Control Of Advanced Drones" /></td> -->
                                 <th> <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#applyModal">
                                         Apply&nbsp;Now
@@ -142,7 +142,7 @@
                             <tr>
                                 <td>7</td>
                                 <td>Digital Twin Technology</td>
-                                <td><img src="assets/images/digital_twin.png" class="img-fluid w-25" alt="Digital Twin Technology" /></td>
+                                <!-- <td><img src="assets/images/digital_twin.png" class="img-fluid w-25" alt="Digital Twin Technology" /></td> -->
                                 <th> <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#applyModal">
                                         Apply&nbsp;Now
@@ -153,7 +153,7 @@
                             <tr>
                                 <td>8</td>
                                 <td>Non-Terrestrial Network (NTN) Communications</td>
-                                <td><img src="assets/images/ntn.png" class="img-fluid w-25" alt="Non-Terrestrial Network (NTN) Communications" /></td>
+                                <!-- <td><img src="assets/images/ntn.png" class="img-fluid w-25" alt="Non-Terrestrial Network (NTN) Communications" /></td> -->
                                 <th> <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#applyModal">
                                         Apply&nbsp;Now
@@ -164,7 +164,7 @@
                             <tr>
                                 <td>9</td>
                                 <td>5G Broadcasting</td>
-                                <td><img src="assets/images/5g_broadcast.png" class="img-fluid w-25" alt="5G Broadcasting" /></td>
+                                <!-- <td><img src="assets/images/5g_broadcast.png" class="img-fluid w-25" alt="5G Broadcasting" /></td> -->
                                 <th> <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#applyModal">
                                         Apply&nbsp;Now
@@ -175,7 +175,7 @@
                             <tr>
                                 <td>10</td>
                                 <td>Emergency Communication Systems</td>
-                                <td><img src="assets/problem_statements/5g broadcast 10.jpeg" class="img-fluid w-25" alt="Emergency Communication Systems" /></td>
+                                <!-- <td><img src="assets/problem_statements/5g broadcast 10.jpeg" class="img-fluid w-25" alt="Emergency Communication Systems" /></td> -->
                                 <th> <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#applyModal">
                                         Apply&nbsp;Now
@@ -186,7 +186,7 @@
                             <tr>
                                 <td>11</td>
                                 <td>Virtual Networking and SDN</td>
-                                <td><img src="assets/problem_statements/5g oran.png" class="img-fluid w-25" alt="Virtual Networking and SDN" /></td>
+                                <!-- <td><img src="assets/problem_statements/5g oran.png" class="img-fluid w-25" alt="Virtual Networking and SDN" /></td> -->
                                 <th> <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#applyModal">
                                         Apply&nbsp;Now
