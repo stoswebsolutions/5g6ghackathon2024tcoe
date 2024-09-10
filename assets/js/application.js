@@ -153,3 +153,45 @@ function validateForm() {
 
   return valid;
 }
+
+function handleSubmit(event) {
+  event.preventDefault(); // Prevent default form submission behavior
+
+  if (!validateForm()) {
+      return false; // Don't submit if the form is invalid
+  }
+
+  // Disable the submit button and show the progress bar
+  const submitBtn = document.getElementById('submitBtn');
+  submitBtn.disabled = true;
+
+  const progressBar = document.querySelector('.progress');
+  progressBar.style.display = 'block';
+
+  const progress = document.getElementById('progressBar');
+  progress.style.width = '0%'; // Reset progress bar
+
+  let uploadProgress = 0;
+  const interval = setInterval(function () {
+      uploadProgress += 10;
+      progress.style.width = uploadProgress + '%';
+
+      if (uploadProgress >= 100) {
+          clearInterval(interval);
+          submitForm(); // Actually submit the form after the progress completes
+      }
+  }, 500); // Simulated progress interval
+}
+
+function submitForm() {
+  const form = document.getElementById("applicationForm");
+
+  // Simulate a server request using a timeout
+  setTimeout(function () {
+      // Assume the form was successfully submitted
+      form.submit(); // Now submit the form to the server
+  }, 1000); // Delay to simulate server processing time
+
+  // Show a success message after form submission (after actual submission)
+  document.getElementById("successMessage").style.display = 'block';
+}

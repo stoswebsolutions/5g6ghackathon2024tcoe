@@ -62,7 +62,7 @@ $productFile = '';
 if ($_FILES['productFile']['error'] === UPLOAD_ERR_OK && validate_file($_FILES['productFile'], $allowed_doc_types)) {
   $$productFile = $_FILES['productFile']['name'];
   $productFileExtension = pathinfo($productFile, PATHINFO_EXTENSION);
-  $productFileName = 'productFile_' . date('YmdHis') . '.' . $productFileExtension;
+  $productFileName = $uniqueId.'pf' . date('YmdHis') . '.' . $productFileExtension;
   $productFilePath = $folderName . '/' . $productFileName;
   move_uploaded_file($_FILES['productFile']['tmp_name'], $productFilePath);
 }
@@ -71,7 +71,7 @@ $proofPoC = '';
 if ($_FILES['proofPoC']['error'] === UPLOAD_ERR_OK && validate_file($_FILES['proofPoC'], $allowed_image_types)) {
   $proofPoC = $_FILES['proofPoC']['name'];
   $proofPoCExtension = pathinfo($proofPoC, PATHINFO_EXTENSION);
-  $proofPoCName = 'proofPoC_' . date('YmdHis') . '.' . $proofPoCExtension;
+  $proofPoCName = $uniqueId.'poc' . date('YmdHis') . '.' . $proofPoCExtension;
   $proofPoCPath = $folderName . '/' . $proofPoCName;
   move_uploaded_file($_FILES['proofPoC']['tmp_name'], $proofPoCPath);
 }
@@ -80,7 +80,7 @@ $similarProductFile = '';
 if ($_FILES['similarProductFile']['error'] === UPLOAD_ERR_OK && validate_file($_FILES['similarProductFile'], $allowed_doc_types)) {
   $similarProductFile = $_FILES['similarProductFile']['name'];
   $similarProductFileExtension = pathinfo($similarProductFile, PATHINFO_EXTENSION);
-  $similarProductFileName = 'similarProductFile_' . date('YmdHis') . '.' . $similarProductFileExtension;
+  $similarProductFileName = $uniqueId.'spf' . date('YmdHis') . '.' . $similarProductFileExtension;
   $similarProductFilePath = $folderName . '/' . $similarProductFileName;
   move_uploaded_file($_FILES['similarProductFile']['tmp_name'], $similarProductFilePath);
 }
@@ -89,7 +89,7 @@ $shareholding = '';
 if ($_FILES['shareholding']['error'] === UPLOAD_ERR_OK && validate_file($_FILES['shareholding'], $allowed_doc_types)) {
   $shareholding = $_FILES['shareholding']['name'];
   $shareholdingExtension = pathinfo($shareholding, PATHINFO_EXTENSION);
-  $shareholdingName = 'shareholding_' . date('YmdHis') . '.' . $shareholdingExtension;
+  $shareholdingName = $uniqueId.'sh' . date('YmdHis') . '.' . $shareholdingExtension;
   $shareholdingPath = $folderName . '/' . $shareholdingName;
   move_uploaded_file($_FILES['shareholding']['tmp_name'], $shareholdingPath);
 }
@@ -98,7 +98,7 @@ $incorporation = '';
 if ($_FILES['incorporation']['error'] === UPLOAD_ERR_OK && validate_file($_FILES['incorporation'], $allowed_doc_types)) {
   $incorporation = $_FILES['incorporation']['name'];
   $incorporationExtension = pathinfo($incorporation, PATHINFO_EXTENSION);
-  $incorporationName = 'incorporation_' . date('YmdHis') . '.' . $incorporationExtension;
+  $incorporationName = $uniqueId.'ic' . date('YmdHis') . '.' . $incorporationExtension;
   $incorporationPath = $folderName . '/' . $incorporationName;
   move_uploaded_file($_FILES['incorporation']['tmp_name'], $incorporationPath);
 }
@@ -107,7 +107,7 @@ $idProof = '';
 if ($_FILES['idProof']['error'] === UPLOAD_ERR_OK && validate_file($_FILES['idProof'], $allowed_doc_types)) {
   $idProof = $_FILES['idProof']['name'];
   $idProofExtension = pathinfo($idProof, PATHINFO_EXTENSION);
-  $idProofName = 'idProof_' . date('YmdHis') . '.' . $idProofExtension;
+  $idProofName = $uniqueId.'ip' . date('YmdHis') . '.' . $idProofExtension;
   $idProofPath = $folderName . '/' . $idProofName;
   move_uploaded_file($_FILES['idProof']['tmp_name'], $idProofPath);
 }
@@ -124,7 +124,7 @@ try {
   if ($conn->query($sql) === TRUE) {
     $uniqueApplicant = $conn->insert_id;
     $sql1 = "INSERT INTO technical (domain, product, productFile, presentationVideo, presentationURL, technologyLevel, proofPoC, describeProduct, productPatent, patentDetails, similarProduct, similarProductFile, status, createAt, uniqueId, uniqueApplicant) VALUES ('$domain', '$product', '$productFilePath', '$presentationVideo', '$presentationURL', '$technologyLevel', '$proofPoCPath', '$describeProduct', '$productPatent', '$patentDetails', '$similarProduct', '$similarProductFilePath', '$status', '$createAt', '$uniqueId', '$uniqueApplicant')";
-    $sql2 = "INSERT INTO documents (shareholding,incorporation, idProof, status, createAt, uniqueId, uniqueApplicant) VALUES ('$shareholding', '$incorporationPath', '$idProofPath', '$status', '$createAt', '$uniqueId', '$uniqueApplicant')";
+    $sql2 = "INSERT INTO documents (shareholding, incorporation, idProof, status, createAt, uniqueId, uniqueApplicant) VALUES ('$shareholdingPath', '$incorporationPath', '$idProofPath', '$status', '$createAt', '$uniqueId', '$uniqueApplicant')";
     if ($conn->query($sql1) === TRUE && $conn->query($sql2) === TRUE) {
 
       $applicant_name = $applicant_name;

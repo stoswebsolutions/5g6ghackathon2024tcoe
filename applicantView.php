@@ -247,7 +247,7 @@ $uniqueId = $_SESSION['uniqueId'];
                                             <div class="row mb-2">
                                                 <div class=""><label class="h5">YouTube URL / LinkedIn URL</label></div>
                                                 <div class="">
-                                                    <p><a href="https://5g6g-hackathon2024.tcoe.in/<?= htmlspecialchars($row['presentationURL']) ?>" target="_blank">Click Here</a></p>
+                                                    <p><a href="<?= htmlspecialchars($row['presentationURL']) ?>" target="_blank">Click Here</a></p>
                                                 </div>
                                             </div>
                                         <?php endif; ?>

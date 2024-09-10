@@ -28,6 +28,11 @@ if (isset($_POST['problemStatementValue']) && !empty(trim($_POST['problemStateme
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/application.css" />
+  <style>
+    .progress {
+      display: none;
+    }
+  </style>
 </head>
 
 <body class="container-fluid">
@@ -55,7 +60,7 @@ if (isset($_POST['problemStatementValue']) && !empty(trim($_POST['problemStateme
   <div class="row">
     <h4 class="text-center">Application:<span class="mx-2"><?= $problemStatementValue ?></span></h4>
     <div class="col-sm-6 offset-sm-3">
-      <form name="applicationForm" action="applicant" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+      <form name="applicationForm" id="applicationForm" method="post" action="applicant" onsubmit="return handleSubmit(event)" enctype="multipart/form-data">
         <div class="stepper-wrapper">
           <div class="stepper-item">
             <div class="step-counter">1</div>
@@ -367,11 +372,17 @@ if (isset($_POST['problemStatementValue']) && !empty(trim($_POST['problemStateme
             <span id="declarationError" class="error"></span>
           </label>
         </div>
+        <div class="progress mb-3">
+          <div class="progress-bar" role="progressbar" style="width: 0%;" id="progressBar"></div>
+        </div>
         <div class="button-section">
           <button type="reset" class="save-btn btn m-2">Reset</button>
-          <button type="submit" class="submit-btn btn m-2">Submit</button>
+          <button type="submit" id="submitBtn" class="submit-btn btn m-2">Submit</button>
         </div>
       </form>
+      <div id="successMessage" class="alert alert-success mt-3" style="display: none;">
+        Form submitted successfully!
+      </div>
     </div>
   </div>
   <script src="assets/js/application.js"></script>
