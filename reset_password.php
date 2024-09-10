@@ -39,12 +39,8 @@
                     $token = $_GET['token'];
 
                     // Check if the token is valid and hasn't expired
-                    $sql = "SELECT uniqueId, email FROM users WHERE reset_token = ? AND reset_expiry > NOW()";
-                    $stmt = $conn->prepare($sql);
-                    $stmt->bind_param("s", $token);
-                    $stmt->execute();
-                    $result = $stmt->get_result();
-
+                    $sql = "SELECT uniqueId, email FROM users WHERE reset_token = '$token' AND reset_expiry > NOW()";
+                    $result = $conn->query($sql);
                     if ($result->num_rows > 0) {
                         // Token is valid, show the reset password form
                         $row = $result->fetch_assoc();
