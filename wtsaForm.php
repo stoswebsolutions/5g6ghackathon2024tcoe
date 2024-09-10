@@ -117,4 +117,4 @@ try {
     // Error handling
     echo "<script>alert('" . $e->getMessage() . "');</script>";
 }
-echo "<script> window.location.href='home#wtsaforms';</script>";
+echo "<script> window.location.href='wtsa';</script>";
