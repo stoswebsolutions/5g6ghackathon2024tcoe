@@ -55,7 +55,7 @@
             <a class="nav-link" href="#contact">Contact Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-primary" data-bs-toggle="modal" data-bs-target="#wtsaModal" href="#wtsa">WTSA</a>
+            <a class="nav-link text-primary" href="wtsa">WTSA</a>
           </li>
           <li class="nav-item">
             <a
@@ -96,7 +96,7 @@
               href="#login">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-primary" href="https://bit.ly/WTSAoutreach" target="_blank">WTSA Registrations</a>
+            <a class="nav-link text-primary" href="wtsa">WTSA</a>
           </li>
           <li class="nav-item">
             <a
@@ -1877,6 +1877,31 @@
               <div class="accordion-body">
                 <span>
                   A. You can reach us at 5g6ghack24@tcoe.in or call us at +91 84668-83949(Deepak Boorla).
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingNine">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseNine"
+                aria-expanded="false"
+                aria-controls="collapseNine">
+                <i class="fas fa-chevron-down accordion-icon"></i>
+                <span>Q. Will there be any traveling reimbursement to attend the hackathon?</span>
+              </button>
+            </h2>
+            <div
+              id="collapseNine"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingNine"
+              data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                <span>
+                  A. Yes. Each team/individual will be reimbursed up to ₹5000.
                 </span>
               </div>
             </div>

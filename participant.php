@@ -1702,6 +1702,31 @@ if (!isset($_SESSION['uniqueId'])) {
               </div>
             </div>
           </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingNine">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseNine"
+                aria-expanded="false"
+                aria-controls="collapseNine">
+                <i class="fas fa-chevron-down accordion-icon"></i>
+                <span>Q. Will there be any traveling reimbursement to attend the hackathon?</span>
+              </button>
+            </h2>
+            <div
+              id="collapseNine"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingNine"
+              data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                <span>
+                  A. Yes. Each team/individual will be reimbursed up to ₹5000.
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
