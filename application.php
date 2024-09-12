@@ -269,12 +269,12 @@ if (isset($_POST['problemStatementValue']) && !empty(trim($_POST['problemStateme
                 <div id="productError" class="error"></div>
               </div>
               <div class="form-group mb-3">
-                <label for="productFile"><span style="color: red">*</span>Upload the note on Technical Details or Product/Solution:</label>
+                <label for="productFile"><span style="color: red">*</span>Upload the note on Technical Details or Product/Solution<span style="color: red">(Allowed only PDF and DOC)</span>:</label>
                 <input type="file" id="productFile" name="productFile" accept=".pdf,.doc,.docx" class="form-control">
                 <div id="productFileError" class="error"></div>
               </div>
               <div class="form-group mb-3">
-                <label for="presentationVideo">Please provide a Power Point Presentation /two-minute Product Video:</label>
+                <label for="presentationVideo">Please provide a Power Point Presentation /two-minute Product Video<span style="color: red">(Allowed only PPT and MP4)</span>:</label>
                 <input type="file" id="presentationVideo" name="presentationVideo" accept=".ppt,.pptx,mp4" class="form-control">
                 <div id="presentationVideoError" class="error"></div>
               </div>
@@ -302,7 +302,7 @@ if (isset($_POST['problemStatementValue']) && !empty(trim($_POST['problemStateme
                 <div id="technologyLevelError" class="error"></div>
               </div>
               <div class="form-group mb-3">
-                <label for="proofPoC">Proof of Concept :</label>
+                <label for="proofPoC">Proof of Concept<span style="color: red">(Allowed only JPG,JPEG and PNG)</span>:</label>
                 <input type="file" id="proofPoC" name="proofPoC" accept=".jpg,.jpeg,.png" class="form-control">
                 <div id="proofPoCError" class="error"></div>
               </div>
@@ -329,7 +329,7 @@ if (isset($_POST['problemStatementValue']) && !empty(trim($_POST['problemStateme
                 <div id="similarProductError" class="error"></div>
               </div>
               <div class="form-group mb-3" id="similarProductFileId" style="display: none;">
-                <label for="similarProductFile">If yes, does your proposed product have advantage over other existing solutions:</label>
+                <label for="similarProductFile">If yes, does your proposed product have advantage over other existing solutions<span style="color: red">(Allowed only PDF and PPT)</span>:</label>
                 <input type="file" id="similarProductFile" name="similarProductFile" class="form-control" accept=".pdf,.ppt,.pptx">
                 <div id="similarProductFileError" class="error"></div>
               </div>
@@ -341,17 +341,17 @@ if (isset($_POST['problemStatementValue']) && !empty(trim($_POST['problemStateme
             </div>
             <div class="container">
               <div class="form-group mb-3">
-                <label for="shareholding">51% shareholding by Indian citizen or Indian Entity (In case of Startups):</label>
+                <label for="shareholding">51% shareholding by Indian citizen or Indian Entity (In case of Startups)<span style="color: red">(Allowed only PDF)</span>:</label>
                 <input type="file" id="shareholding" name="shareholding" class="form-control" accept=".pdf">
                 <div id="shareholdingError" class="error"></div>
               </div>
               <div class="form-group mb-3">
-                <label for="incorporation">Incorporation Certificate (in case of Startups):</label>
+                <label for="incorporation">Incorporation Certificate (in case of Startups)<span style="color: red">(Allowed only PDF)</span>:</label>
                 <input type="file" id="incorporation" name="incorporation" class="form-control" accept=".pdf">
                 <div id="incorporationError" class="error"></div>
               </div>
               <div class="form-group mb-3">
-                <label for="idProof">ID Proof/ Passport of Applicant:</label>
+                <label for="idProof">ID Proof/ Passport of Applicant<span style="color: red">(Allowed only PDF)</span>:</label>
                 <input type="file" id="idProof" name="idProof" class="form-control" accept=".pdf">
                 <div id="idProofError" class="error"></div>
               </div>
@@ -372,14 +372,14 @@ if (isset($_POST['problemStatementValue']) && !empty(trim($_POST['problemStateme
             <span id="declarationError" class="error"></span>
           </label>
         </div>
-        <div class="progress mb-3">
-          <div class="progress-bar" role="progressbar" style="width: 0%;" id="progressBar"></div>
-        </div>
         <div class="button-section">
           <button type="reset" class="save-btn btn m-2">Reset</button>
           <button type="submit" id="submitBtn" class="submit-btn btn m-2">Submit</button>
         </div>
       </form>
+      <div class="progress mb-3">
+        <div class="progress-bar" role="progressbar" style="width: 0%;" id="progressBar"></div>
+      </div>
       <div id="successMessage" class="alert alert-success mt-3" style="display: none;">
         Form submitted successfully!
       </div>
