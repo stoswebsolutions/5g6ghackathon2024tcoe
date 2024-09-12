@@ -123,9 +123,21 @@
               class="d-block w-100 img-fluid rounded shadow-sm" />
           </div>
           <!-- Second Slide -->
-          ]<div class="carousel-item gap-3">
+          <!-- <div class="carousel-item gap-3">
             <img
               src="assets/images/Main Banner.png"
+              alt="Main Banner 2"
+              class="d-block w-100 img-fluid rounded shadow-sm" />
+          </div> -->
+          <div class="carousel-item gap-3">
+            <img
+              src="assets/images/benefits.png"
+              alt="Main Banner 2"
+              class="d-block w-100 img-fluid rounded shadow-sm" />
+          </div>
+          <div class="carousel-item gap-3">
+            <img
+              src="assets/images/prize.png"
               alt="Main Banner 2"
               class="d-block w-100 img-fluid rounded shadow-sm" />
           </div>
