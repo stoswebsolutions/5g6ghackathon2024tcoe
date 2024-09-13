@@ -115,29 +115,15 @@
     <header class="hero bg-white text-center">
       <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <!-- First Slide -->
           <div class="carousel-item active">
             <img
-              src="assets/images/imc2.png"
+              src="assets/images/5g6g_banner.png"
               alt="Main Banner 1"
               class="d-block w-100 img-fluid rounded shadow-sm" />
           </div>
-          <!-- Second Slide -->
-          <!-- <div class="carousel-item gap-3">
-            <img
-              src="assets/images/Main Banner.png"
-              alt="Main Banner 2"
-              class="d-block w-100 img-fluid rounded shadow-sm" />
-          </div> -->
           <div class="carousel-item gap-3">
             <img
-              src="assets/images/benefits.png"
-              alt="Main Banner 2"
-              class="d-block w-100 img-fluid rounded shadow-sm" />
-          </div>
-          <div class="carousel-item gap-3">
-            <img
-              src="assets/images/prize.png"
+              src="assets/images/prize_banner.png"
               alt="Main Banner 2"
               class="d-block w-100 img-fluid rounded shadow-sm" />
           </div>
@@ -162,7 +148,7 @@
       </div>
     </header>
     <!-- About Us Section -->
-    <section id="about" class="about-section">
+    <section id="about" class="about-section mt-3">
       <div class="container-fluid">
         <div class="text-center">
           <h2 class="section-heading">About Us</h2>
@@ -1817,6 +1803,32 @@
                 <span>
                   A. The event is tentatively scheduled for OCT 15, 2024, and the venue will be updated to the winners.
                 </span>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTen">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTen"
+                aria-expanded="false"
+                aria-controls="collapseTen">
+                <i class="fas fa-chevron-down accordion-icon"></i>
+                <span>Q. What are the various phases of this hackathon?</span>
+              </button>
+            </h2>
+            <div
+              id="collapseTen"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTen"
+              data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                <span>Step 1: Submit application on the website. https://5g6g-hackathon2024.tcoe.in/ upto 15th September 2024.</span>
+                <br><span>Step 2: Phase-I (Online Evaluation): 5 Min presentation to Technical Evaluation Committee</span>
+                <br><span>Step 3: Phase-II (Physical Evaluation): Shortlisted Participants of Phase-I, will visit one of the 5G Lab location among Delhi Technological University (DTU) Delhi, IISc Bangalore, IIIT Hyderabad</span>
+                <br><span>Step 4: 5 Winners team from each location will demonstrate their solution at IMC-2024 event</span>
               </div>
             </div>
           </div>
