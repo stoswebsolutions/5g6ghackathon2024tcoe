@@ -85,9 +85,9 @@ if ($result->num_rows > 0) {
 
         // Send the email
         if (mail($to, $subject, $message, $headers)) {
-            echo "Email sent to " . $row['email'] . "\n";
+            echo "Email sent to " . $row['email'] . "\n<br><br>";
         } else {
-            echo "Failed to send email to " . $row['email'] . "\n";
+            echo "Failed to send email to " . $row['email'] . "\n<br><br>";
         }
     }
 } else {
