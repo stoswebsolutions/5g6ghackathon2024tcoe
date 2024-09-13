@@ -253,12 +253,6 @@
                                 promoters/partners are not eligible.
                             </li>
                             <li>
-                                Entries will be accepted in English language only and the
-                                submissions should be made in the template provided on the
-                                <a href="https://5g6g-hackathon2024.tcoe.in/" target="_blank">https://5g6g-hackathon2024.tcoe.in/</a>
-                                Website.
-                            </li>
-                            <li>
                                 Any incomplete/inaccurate entries or entry after the close of
                                 Entry Period shall be invalid and any such entry may be
                                 permitted only at the sole discretion of the DoT.
