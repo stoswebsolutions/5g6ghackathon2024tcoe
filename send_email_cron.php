@@ -2,29 +2,30 @@
 // Database connection
 include 'db_connect.php';
 // Query to get data for sending email (modify this query as needed)
-$sql = "SELECT email, fullname FROM users";
+$sql = "SELECT email, fullname FROM users ";
 $result = $conn->query($sql);
 
 // Prepare email sending logic
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        $participant_name = $row['fullname'];
-        $hackathon_name = 'Hackathon 2024';
-        $company_name = 'Hackathon Organization';
-        $contact_email = '5g6ghack24@tcoe.in';
-        $contact_number = '+91 84668-83949';
-        $sender_name = 'Deepak Boorla';
+        try {
+            $participant_name = $row['fullname'];
+            $hackathon_name = 'Hackathon 2024';
+            $company_name = 'Hackathon Organization';
+            $contact_email = '5g6ghack24@tcoe.in';
+            $contact_number = '+91 84668-83949';
+            $sender_name = 'Deepak Boorla';
 
-        $subject = "Action Required: Complete Your Hackathon Application";
+            $subject = "Action Required: Complete Your Hackathon Application";
 
-        $to = $row['email'];
-        $headers = "MIME-Version: 1.0" . "\r\n";
-        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-        $headers .= "From: 5g6ghack24@tcoe.in" . "\r\n";
-        $headers .= "Reply-To: 5g6ghack24@tcoe.in" . "\r\n";
-        $headers .= "X-Mailer: PHP/" . phpversion();
+            $to = $row['email'];
+            $headers = "MIME-Version: 1.0" . "\r\n";
+            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+            $headers .= "From: 5g6ghack24@tcoe.in" . "\r\n";
+            $headers .= "Reply-To: 5g6ghack24@tcoe.in" . "\r\n";
+            $headers .= "X-Mailer: PHP/" . phpversion();
 
-        $message = "
+            $message = "
 <!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -83,11 +84,14 @@ if ($result->num_rows > 0) {
 </html>
 ";
 
-        // Send the email
-        if (mail($to, $subject, $message, $headers)) {
-            echo "Email sent to " . $row['email'] . "\n<br><br>";
-        } else {
-            echo "Failed to send email to " . $row['email'] . "\n<br><br>";
+            // Send the email
+            if (mail($to, $subject, $message, $headers)) {
+                echo "Email sent to " . $row['email'] . "\n<br><br>";
+            } else {
+                echo "Failed to send email to " . $row['email'] . "\n<br><br>";
+            }
+        } catch (Exception $e) {
+            error_log('Cron email error: ' . $e->getMessage());
         }
     }
 } else {

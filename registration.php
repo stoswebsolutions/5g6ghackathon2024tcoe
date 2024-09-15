@@ -22,13 +22,13 @@ try {
         VALUES ('$fullname', '$email', '$mobile', '$password', '$categoryType', '$categoryName', '$status', '$createAt', '$randomNumber', Null, Null, 'participant')";
 
     if ($conn->query($sql) === TRUE) {
-        $folderName = 'assets/users/' . $conn->insert_id;
-        if (!file_exists($folderName)) {
-            if (mkdir($folderName, 0777, true)) {
-            } else {
-                $folderName = "assets/users";
-            }
-        }
+        // $folderName = 'assets/users/' . $conn->insert_id;
+        // if (!file_exists($folderName)) {
+        //     if (mkdir($folderName, 0777, true)) {
+        //     } else {
+        //         $folderName = "assets/users";
+        //     }
+        // }
 
         $user_name = $fullname;
         $hackathon_name = 'Hackathon 2024';
