@@ -112,7 +112,7 @@ if (!isset($_SESSION['uniqueId'])) {
           <!-- First Slide -->
           <div class="carousel-item active">
             <img
-              src="./assets/images/imc2.png"
+              src="./assets/images/banner1.png"
               alt="Main Banner 1"
               class="d-block w-100 img-fluid rounded shadow-sm" />
           </div>
@@ -125,7 +125,7 @@ if (!isset($_SESSION['uniqueId'])) {
           </div> -->
           <div class="carousel-item gap-3">
             <img
-              src="assets/images/benefits.png"
+              src="assets/images/banner2.png"
               alt="Main Banner 2"
               class="d-block w-100 img-fluid rounded shadow-sm" />
           </div>

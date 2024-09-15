@@ -117,13 +117,13 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img
-              src="assets/images/5g6g_banner.png"
+              src="assets/images/banner1.png"
               alt="Main Banner 1"
               class="d-block w-100 img-fluid rounded shadow-sm" />
           </div>
           <div class="carousel-item gap-3">
             <img
-              src="assets/images/prize_banner.png"
+              src="assets/images/banner2.png"
               alt="Main Banner 2"
               class="d-block w-100 img-fluid rounded shadow-sm" />
           </div>
