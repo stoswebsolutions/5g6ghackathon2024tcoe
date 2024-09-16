@@ -127,6 +127,12 @@
               alt="Main Banner 2"
               class="d-block w-100 img-fluid rounded shadow-sm" />
           </div>
+          <div class="carousel-item gap-3">
+            <img
+              src="assets/images/banner3.png"
+              alt="Main Banner 3"
+              class="d-block w-100 img-fluid rounded shadow-sm" />
+          </div>
         </div>
         <!-- Carousel Controls -->
         <button

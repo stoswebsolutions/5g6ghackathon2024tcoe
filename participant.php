@@ -109,20 +109,12 @@ if (!isset($_SESSION['uniqueId'])) {
     <header class="hero bg-white text-center">
       <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <!-- First Slide -->
           <div class="carousel-item active">
             <img
-              src="./assets/images/banner1.png"
+              src="assets/images/banner1.png"
               alt="Main Banner 1"
               class="d-block w-100 img-fluid rounded shadow-sm" />
           </div>
-          <!-- Second Slide -->
-          <!-- <div class="carousel-item gap-3">
-            <img
-              src="assets/images/Main Banner.png"
-              alt="Main Banner 2"
-              class="d-block w-100 img-fluid rounded shadow-sm" />
-          </div> -->
           <div class="carousel-item gap-3">
             <img
               src="assets/images/banner2.png"
@@ -131,8 +123,8 @@ if (!isset($_SESSION['uniqueId'])) {
           </div>
           <div class="carousel-item gap-3">
             <img
-              src="assets/images/prize.png"
-              alt="Main Banner 2"
+              src="assets/images/banner3.png"
+              alt="Main Banner 3"
               class="d-block w-100 img-fluid rounded shadow-sm" />
           </div>
         </div>

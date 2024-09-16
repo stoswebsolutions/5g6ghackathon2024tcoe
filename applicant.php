@@ -1,5 +1,11 @@
 <?php
 session_start();
+session_start();
+if (!isset($_SESSION['uniqueId'])) {
+  header("Location: application");
+  exit();
+}
+
 include 'db_connect.php'; // Include your database connection file
 
 // Set the timezone to Indian Standard Time (IST)
