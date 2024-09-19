@@ -1100,492 +1100,495 @@ if (!isset($_SESSION['uniqueId'])) {
                 </li>
               </ol>
             </div>
-            <div class="modal-footer">
+            <!-- <div class="modal-footer">
               <input type="hidden" class="form-control" id="problemStatementValue" name="problemStatementValue" readonly>
               <button type="submit" class="btn btn-primary mt-3 text-white">I Agree
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <!-- login and register -->
-    <div
-      class="modal fade"
-      id="authModal"
-      tabindex="-1"
-      aria-labelledby="authModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-md">
-        <div class="modal-content no-border">
-          <div class="modal-header">
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <ul class="nav nav-tabs" id="authTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link active"
-                  id="login-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#login"
-                  type="button"
-                  role="tab">
-                  Existing User
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link"
-                  id="register-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#register"
-                  type="button"
-                  role="tab">
-                  New User
-                </button>
-              </li>
-            </ul>
-            <div class="tab-content" id="authTabContent">
-              <!-- Login Form -->
-              <div
-                class="tab-pane fade show active"
-                id="login"
-                role="tabpanel">
-                <form action="login.php" method="post">
-                  <div class="mb-3">
-                    <input
-                      type="email"
-                      class="form-control"
-                      placeholder="Email"
-                      id="email"
-                      name="email"
-                      required />
-                  </div>
-                  <div class="mb-3">
-                    <input
-                      type="password"
-                      class="form-control"
-                      placeholder="Password"
-                      id="password"
-                      name="password"
-                      required />
-                  </div>
-                  <a type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#forgotModal"> Forgot Password? </a>
-                  <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">
-                      Login
-                    </button>
-                  </div>
-                </form>
-              </div>
-              <!-- Register Form -->
-              <div class="tab-pane fade" id="register" role="tabpanel">
-                <form action="registration.php" method="post">
-                  <div class="mb-3">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Name"
-                      id="fullname"
-                      name="fullname"
-                      required />
-                  </div>
-                  <div class="mb-3">
-                    <input
-                      type="email"
-                      class="form-control"
-                      placeholder="Email"
-                      id="email"
-                      name="email"
-                      required />
-                  </div>
-                  <div class="mb-3">
-                    <input
-                      type="password"
-                      class="form-control"
-                      placeholder="Password"
-                      id="password"
-                      name="password"
-                      required />
-                  </div>
-                  <div class="mb-3">
-                    <select
-                      class="form-select"
-                      id="categoryType"
-                      name="categoryType"
-                      required>
-                      <option value="" disabled selected>I am</option>
-                      <option value="Academic Professional">
-                        Academic Professional
-                      </option>
-                      <option value="Corporate Professional">
-                        Corporate Professional
-                      </option>
-                      <option value="Government Professional">
-                        Government Professional
-                      </option>
-                      <option value="Startup Professional">
-                        Startup Professional
-                      </option>
-                    </select>
-                  </div>
-                  <div class="mb-3">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Company Name"
-                      id="categoryName"
-                      name="categoryName"
-                      required />
-                  </div>
-                  <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">
-                      GET STARTED
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="forgotModal" tabindex="-1" aria-labelledby="forgotModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <form action="forgotpassword.php" method="post">
-          <div class="modal-content">
-            <div class="modal-body">
-              <div class="mb-3">
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Registered Email"
-                  id="email"
-                  name="email"
-                  required />
-              </div>
-            </div>
+              </button> -->
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary">Request Password</button>
+              <h6><span class="text-danger">Applications Closed on </span>18th September 2024</h6>
             </div>
-          </div>
+        </div>
         </form>
       </div>
     </div>
-    <!-- Eligibility Section -->
-    <section id="eligibility">
-      <div class="container-fluid">
-        <div class="text-center">
-          <h2 class="section-heading">Eligibility Criteria</h2>
+  </div>
+  <!-- login and register -->
+  <div
+    class="modal fade"
+    id="authModal"
+    tabindex="-1"
+    aria-labelledby="authModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+      <div class="modal-content no-border">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"></button>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card eligible-card">
-              <div class="card-body">
-                <h3 class="card-title">Students</h3>
-                <p class="card-text">
-                  Students from academic institutions in India.
-                </p>
-              </div>
+        <div class="modal-body">
+          <ul class="nav nav-tabs" id="authTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="login-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#login"
+                type="button"
+                role="tab">
+                Existing User
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="register-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#register"
+                type="button"
+                role="tab">
+                New User
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="authTabContent">
+            <!-- Login Form -->
+            <div
+              class="tab-pane fade show active"
+              id="login"
+              role="tabpanel">
+              <form action="login.php" method="post">
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email"
+                    id="email"
+                    name="email"
+                    required />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Password"
+                    id="password"
+                    name="password"
+                    required />
+                </div>
+                <a type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#forgotModal"> Forgot Password? </a>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary">
+                    Login
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- Register Form -->
+            <div class="tab-pane fade" id="register" role="tabpanel">
+              <form action="registration.php" method="post">
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Name"
+                    id="fullname"
+                    name="fullname"
+                    required />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email"
+                    id="email"
+                    name="email"
+                    required />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Password"
+                    id="password"
+                    name="password"
+                    required />
+                </div>
+                <div class="mb-3">
+                  <select
+                    class="form-select"
+                    id="categoryType"
+                    name="categoryType"
+                    required>
+                    <option value="" disabled selected>I am</option>
+                    <option value="Academic Professional">
+                      Academic Professional
+                    </option>
+                    <option value="Corporate Professional">
+                      Corporate Professional
+                    </option>
+                    <option value="Government Professional">
+                      Government Professional
+                    </option>
+                    <option value="Startup Professional">
+                      Startup Professional
+                    </option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Company Name"
+                    id="categoryName"
+                    name="categoryName"
+                    required />
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary">
+                    GET STARTED
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card eligible-card">
-              <div class="card-body">
-                <h3 class="card-title">Startups</h3>
-                <p class="card-text">
-                  Owned and controlled by Resident Indian Citizens.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card eligible-card">
-              <div class="card-body">
-                <h3 class="card-title">R&D Institutions</h3>
-                <p class="card-text">Private R&D Centers from India.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card not-eligible-card">
-              <div class="card-body">
-                <h3 class="card-title">Academia</h3>
-                <p class="card-text">
-                  Academic institutions registered in India.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card not-eligible-card">
-              <div class="card-body">
-                <h3 class="card-title">Employees of DoT, IMC, DCIS</h3>
-                <p class="card-text">NOT ELIGIBLE</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card not-eligible-card">
-              <div class="card-body">
-                <h3 class="card-title">Selected in Previous 5G Hackathon</h3>
-                <p class="card-text">NOT ELIGIBLE</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Timelines Section -->
-    <section id="timelines" class="bg-white">
-      <div class="container-fluid text-center">
-        <div class="timeline-image-wrapper">
-          <img
-            src="./assets/images/Timeline2.png"
-            alt="Timelines Banner"
-            class="timeline-image" />
-        </div>
-      </div>
-    </section>
-    <!-- Mentors Section -->
-    <div class="container-fluid text-center my-3" id="meetourmentors">
-      <div class="text-center">
-        <h2 class="section-heading">Meet Our Mentors</h2>
-      </div>
-      <div class="row mx-auto my-auto justify-content-center">
-        <div id="recipeCarousel2" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner" role="listbox">
-            <!-- Carousel items for Section 2 -->
-            <div class="carousel-item gap-3 active">
-              <div class="col-md-3">
-                <div class="card h-100 text-center">
-                  <img src="assets/mentors/medium_Neil.png" class="card-img-top mentor-img"
-                    alt="Neil Shah" />
-                  <div class="card-body d-flex flex-column align-items-center">
-                    <h5 class="card-title h6">Neil Shah</h5>
-                    <p class="card-text">Counter Point Research</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            ]<div class="carousel-item gap-3">
-              <div class="col-md-3">
-                <div class="card h-100 text-center">
-                  <img src="assets/mentors/medium_Ravi_Sina.png" class="card-img-top mentor-img"
-                    alt="Ravi Sinha" />
-                  <div class="card-body d-flex flex-column align-items-center">
-                    <h5 class="card-title h6">Ravi Sinha</h5>
-                    <p class="card-text">O-Ran Alliance</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            ]<div class="carousel-item gap-3">
-              <div class="col-md-3">
-                <div class="card h-100 text-center">
-                  <img src="assets/mentors/medium_Aayush.png" class="card-img-top mentor-img"
-                    alt="Aayush Bhatnagar" />
-                  <div class="card-body d-flex flex-column align-items-center">
-                    <h5 class="card-title h6">Aayush Bhatnagar</h5>
-                    <p class="card-text">Jio</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            ]<div class="carousel-item gap-3">
-              <div class="col-md-3">
-                <div class="card h-100 text-center">
-                  <img src="assets/mentors/medium_mentor.png" class="card-img-top mentor-img"
-                    alt="Sanjay Kumar" />
-                  <div class="card-body d-flex flex-column align-items-center">
-                    <h5 class="card-title h6">Sanjay Kumar</h5>
-                    <p class="card-text">TelcoLearn</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            ]<div class="carousel-item gap-3">
-              <div class="col-md-3">
-                <div class="card h-100 text-center">
-                  <img src="assets/mentors/medium_gopi.png" class="card-img-top mentor-img"
-                    alt="Gopi Krishna Lakkepuram" />
-                  <div class="card-body d-flex flex-column align-items-center">
-                    <h5 class="card-title h6">Gopi Krishna Lakkepuram</h5>
-                    <p class="card-text">Hyperleap AI</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            ]<div class="carousel-item gap-3">
-              <div class="col-md-3">
-                <div class="card h-100 text-center">
-                  <img src="assets/mentors/medium_kiran.png" class="card-img-top mentor-img"
-                    alt="Kiran Babu" />
-                  <div class="card-body d-flex flex-column align-items-center">
-                    <h5 class="card-title h6">Kiran Babu</h5>
-                    <p class="card-text">Rava AI</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            ]<div class="carousel-item gap-3">
-              <div class="col-md-3">
-                <div class="card h-100 text-center">
-                  <img src="assets/mentors/medium_rajan.png" class="card-img-top mentor-img"
-                    alt="Ranjan Relan" />
-                  <div class="card-body d-flex flex-column align-items-center">
-                    <h5 class="card-title h6">Ranjan Relan</h5>
-                    <p class="card-text">AgentAnalytics.AI</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            ]<div class="carousel-item gap-3">
-              <div class="col-md-3">
-                <div class="card h-100 text-center">
-                  <img src="assets/mentors/medium_pushkar.png" class="card-img-top mentor-img"
-                    alt="Pushkar Apte" />
-                  <div class="card-body d-flex flex-column align-items-center">
-                    <h5 class="card-title h6">Pushkar Apte</h5>
-                    <p class="card-text">Qualcomm India Pvt. Ltd.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            ]<div class="carousel-item gap-3">
-              <div class="col-md-3">
-                <div class="card h-100 text-center">
-                  <img src="assets/mentors/medium_rajesh.png" class="card-img-top mentor-img"
-                    alt="Rajesh Kumar Pathak" />
-                  <div class="card-body d-flex flex-column align-items-center">
-                    <h5 class="card-title h6">Rajesh Kumar Pathak</h5>
-                    <p class="card-text">Bharat 6G Alliance</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Add more slides as needed for Section 2 -->
-          </div>
-          <!-- Controls for Section 2 -->
-          <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel2" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          </a>
-          <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel2" role="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          </a>
         </div>
       </div>
     </div>
-    <!-- Prize Money Section -->
-    <section id="prize" class="price-section">
-      <div class="container-fluid">
-        <div class="text-center">
-          <h2 class="section-heading">Prize Money</h2>
+  </div>
+  <div class="modal fade" id="forgotModal" tabindex="-1" aria-labelledby="forgotModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <form action="forgotpassword.php" method="post">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Registered Email"
+                id="email"
+                name="email"
+                required />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Request Password</button>
+          </div>
         </div>
-        <div class="text-center">
-          <img
-            src="./assets/images/Prizes (1).png"
-            alt="About Us"
-            class="img-fluid rounded shadow-sm" />
+      </form>
+    </div>
+  </div>
+  <!-- Eligibility Section -->
+  <section id="eligibility">
+    <div class="container-fluid">
+      <div class="text-center">
+        <h2 class="section-heading">Eligibility Criteria</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card eligible-card">
+            <div class="card-body">
+              <h3 class="card-title">Students</h3>
+              <p class="card-text">
+                Students from academic institutions in India.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card eligible-card">
+            <div class="card-body">
+              <h3 class="card-title">Startups</h3>
+              <p class="card-text">
+                Owned and controlled by Resident Indian Citizens.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card eligible-card">
+            <div class="card-body">
+              <h3 class="card-title">R&D Institutions</h3>
+              <p class="card-text">Private R&D Centers from India.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card not-eligible-card">
+            <div class="card-body">
+              <h3 class="card-title">Academia</h3>
+              <p class="card-text">
+                Academic institutions registered in India.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card not-eligible-card">
+            <div class="card-body">
+              <h3 class="card-title">Employees of DoT, IMC, DCIS</h3>
+              <p class="card-text">NOT ELIGIBLE</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card not-eligible-card">
+            <div class="card-body">
+              <h3 class="card-title">Selected in Previous 5G Hackathon</h3>
+              <p class="card-text">NOT ELIGIBLE</p>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-    <!-- FAQs Section -->
-    <section id="faqs">
-      <div class="container-fluid">
-        <div class="text-center">
-          <h2 class="section-heading mb-4">FAQs</h2>
-        </div>
+    </div>
+  </section>
+  <!-- Timelines Section -->
+  <section id="timelines" class="bg-white">
+    <div class="container-fluid text-center">
+      <div class="timeline-image-wrapper">
         <img
-          src="assets/images/FAQs.png"
-          alt=""
-          class="p-4"
-          width="100%"
-          height="auto" />
-        <div class="accordion" id="faqAccordion">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-              <button
-                class="accordion-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne">
-                <i class="fas fa-chevron-down accordion-icon"></i>
-                <span>Q. How do we submit our application?</span>
-              </button>
-            </h2>
-            <div
-              id="collapseOne"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingOne"
-              data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                <span>A. Through the online portal - https://5g6g-hackathon2024.tcoe.in/. You can apply online only.</span>
+          src="./assets/images/Timeline2.png"
+          alt="Timelines Banner"
+          class="timeline-image" />
+      </div>
+    </div>
+  </section>
+  <!-- Mentors Section -->
+  <div class="container-fluid text-center my-3" id="meetourmentors">
+    <div class="text-center">
+      <h2 class="section-heading">Meet Our Mentors</h2>
+    </div>
+    <div class="row mx-auto my-auto justify-content-center">
+      <div id="recipeCarousel2" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <!-- Carousel items for Section 2 -->
+          <div class="carousel-item gap-3 active">
+            <div class="col-md-3">
+              <div class="card h-100 text-center">
+                <img src="assets/mentors/medium_Neil.png" class="card-img-top mentor-img"
+                  alt="Neil Shah" />
+                <div class="card-body d-flex flex-column align-items-center">
+                  <h5 class="card-title h6">Neil Shah</h5>
+                  <p class="card-text">Counter Point Research</p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingSeven">
-              <button
-                class="accordion-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseSeven"
-                aria-expanded="true"
-                aria-controls="collapseSeven">
-                <i class="fas fa-chevron-down accordion-icon"></i>
-                <span>Q. Can we participate in teams?</span>
-              </button>
-            </h2>
-            <div
-              id="collapseSeven"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingSeven"
-              data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                <span>A. Yes! You can form a team of up to 3 folks and participate in the event.</span>
+          ]<div class="carousel-item gap-3">
+            <div class="col-md-3">
+              <div class="card h-100 text-center">
+                <img src="assets/mentors/medium_Ravi_Sina.png" class="card-img-top mentor-img"
+                  alt="Ravi Sinha" />
+                <div class="card-body d-flex flex-column align-items-center">
+                  <h5 class="card-title h6">Ravi Sinha</h5>
+                  <p class="card-text">O-Ran Alliance</p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo"
-                aria-expanded="false"
-                aria-controls="collapseTwo">
-                <i class="fas fa-chevron-down accordion-icon"></i>
-                <span>Q. What can I win?</span>
-              </button>
-            </h2>
-            <div
-              id="collapseTwo"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingTwo"
-              data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                <span>A. Winners will be awarded as below</span>
-                <ol>
-                  <li>First Prize: INR. 2 Lakhs</li>
-                  <li>Second Prize: INR. 1.5 Lakhs</li>
-                  <li>Third Prize: INR. 1 Lakhs</li>
-                  <li>Consolation Prize: INR. 75,000</li>
-                  <li>Best Idea Award: INR. 50,000</li>
-                </ol>
+          ]<div class="carousel-item gap-3">
+            <div class="col-md-3">
+              <div class="card h-100 text-center">
+                <img src="assets/mentors/medium_Aayush.png" class="card-img-top mentor-img"
+                  alt="Aayush Bhatnagar" />
+                <div class="card-body d-flex flex-column align-items-center">
+                  <h5 class="card-title h6">Aayush Bhatnagar</h5>
+                  <p class="card-text">Jio</p>
+                </div>
               </div>
             </div>
           </div>
-          <!-- <div class="accordion-item">
+          ]<div class="carousel-item gap-3">
+            <div class="col-md-3">
+              <div class="card h-100 text-center">
+                <img src="assets/mentors/medium_mentor.png" class="card-img-top mentor-img"
+                  alt="Sanjay Kumar" />
+                <div class="card-body d-flex flex-column align-items-center">
+                  <h5 class="card-title h6">Sanjay Kumar</h5>
+                  <p class="card-text">TelcoLearn</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          ]<div class="carousel-item gap-3">
+            <div class="col-md-3">
+              <div class="card h-100 text-center">
+                <img src="assets/mentors/medium_gopi.png" class="card-img-top mentor-img"
+                  alt="Gopi Krishna Lakkepuram" />
+                <div class="card-body d-flex flex-column align-items-center">
+                  <h5 class="card-title h6">Gopi Krishna Lakkepuram</h5>
+                  <p class="card-text">Hyperleap AI</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          ]<div class="carousel-item gap-3">
+            <div class="col-md-3">
+              <div class="card h-100 text-center">
+                <img src="assets/mentors/medium_kiran.png" class="card-img-top mentor-img"
+                  alt="Kiran Babu" />
+                <div class="card-body d-flex flex-column align-items-center">
+                  <h5 class="card-title h6">Kiran Babu</h5>
+                  <p class="card-text">Rava AI</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          ]<div class="carousel-item gap-3">
+            <div class="col-md-3">
+              <div class="card h-100 text-center">
+                <img src="assets/mentors/medium_rajan.png" class="card-img-top mentor-img"
+                  alt="Ranjan Relan" />
+                <div class="card-body d-flex flex-column align-items-center">
+                  <h5 class="card-title h6">Ranjan Relan</h5>
+                  <p class="card-text">AgentAnalytics.AI</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          ]<div class="carousel-item gap-3">
+            <div class="col-md-3">
+              <div class="card h-100 text-center">
+                <img src="assets/mentors/medium_pushkar.png" class="card-img-top mentor-img"
+                  alt="Pushkar Apte" />
+                <div class="card-body d-flex flex-column align-items-center">
+                  <h5 class="card-title h6">Pushkar Apte</h5>
+                  <p class="card-text">Qualcomm India Pvt. Ltd.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          ]<div class="carousel-item gap-3">
+            <div class="col-md-3">
+              <div class="card h-100 text-center">
+                <img src="assets/mentors/medium_rajesh.png" class="card-img-top mentor-img"
+                  alt="Rajesh Kumar Pathak" />
+                <div class="card-body d-flex flex-column align-items-center">
+                  <h5 class="card-title h6">Rajesh Kumar Pathak</h5>
+                  <p class="card-text">Bharat 6G Alliance</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Add more slides as needed for Section 2 -->
+        </div>
+        <!-- Controls for Section 2 -->
+        <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel2" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel2" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Prize Money Section -->
+  <section id="prize" class="price-section">
+    <div class="container-fluid">
+      <div class="text-center">
+        <h2 class="section-heading">Prize Money</h2>
+      </div>
+      <div class="text-center">
+        <img
+          src="./assets/images/Prizes (1).png"
+          alt="About Us"
+          class="img-fluid rounded shadow-sm" />
+      </div>
+    </div>
+  </section>
+  <!-- FAQs Section -->
+  <section id="faqs">
+    <div class="container-fluid">
+      <div class="text-center">
+        <h2 class="section-heading mb-4">FAQs</h2>
+      </div>
+      <img
+        src="assets/images/FAQs.png"
+        alt=""
+        class="p-4"
+        width="100%"
+        height="auto" />
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne">
+              <i class="fas fa-chevron-down accordion-icon"></i>
+              <span>Q. How do we submit our application?</span>
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingOne"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              <span>A. Through the online portal - https://5g6g-hackathon2024.tcoe.in/. You can apply online only.</span>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSeven">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSeven"
+              aria-expanded="true"
+              aria-controls="collapseSeven">
+              <i class="fas fa-chevron-down accordion-icon"></i>
+              <span>Q. Can we participate in teams?</span>
+            </button>
+          </h2>
+          <div
+            id="collapseSeven"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingSeven"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              <span>A. Yes! You can form a team of up to 3 folks and participate in the event.</span>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo">
+              <i class="fas fa-chevron-down accordion-icon"></i>
+              <span>Q. What can I win?</span>
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              <span>A. Winners will be awarded as below</span>
+              <ol>
+                <li>First Prize: INR. 2 Lakhs</li>
+                <li>Second Prize: INR. 1.5 Lakhs</li>
+                <li>Third Prize: INR. 1 Lakhs</li>
+                <li>Consolation Prize: INR. 75,000</li>
+                <li>Best Idea Award: INR. 50,000</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="accordion-item">
             <h2 class="accordion-header" id="headingThree">
               <button
                 class="accordion-button collapsed"
@@ -1608,225 +1611,225 @@ if (!isset($_SESSION['uniqueId'])) {
               </div>
             </div>
           </div> -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingFour">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFour"
-                aria-expanded="false"
-                aria-controls="collapseFour">
-                <i class="fas fa-chevron-down accordion-icon"></i>
-                <span>Q. When is IMC scheduled to happen this year?</span>
-              </button>
-            </h2>
-            <div
-              id="collapseFour"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingFour"
-              data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                <span>
-                  A. The event is tentatively scheduled for OCT 15, 2024, and the venue will be updated to the winners.
-                </span>
-              </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFour"
+              aria-expanded="false"
+              aria-controls="collapseFour">
+              <i class="fas fa-chevron-down accordion-icon"></i>
+              <span>Q. When is IMC scheduled to happen this year?</span>
+            </button>
+          </h2>
+          <div
+            id="collapseFour"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingFour"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              <span>
+                A. The event is tentatively scheduled for OCT 15, 2024, and the venue will be updated to the winners.
+              </span>
             </div>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTen">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseTen"
-                aria-expanded="false"
-                aria-controls="collapseTen">
-                <i class="fas fa-chevron-down accordion-icon"></i>
-                <span>Q. What are the various phases of this hackathon?</span>
-              </button>
-            </h2>
-            <div
-              id="collapseTen"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingTen"
-              data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                <span>Step 1: Submit application on the website. https://5g6g-hackathon2024.tcoe.in/ upto 15th September 2024.</span>
-                <br><span>Step 2: Phase-I (Online Evaluation): 5 Min presentation to Technical Evaluation Committee</span>
-                <br><span>Step 3: Phase-II (Physical Evaluation): Shortlisted Participants of Phase-I, will visit one of the 5G Lab location among Delhi Technological University (DTU) Delhi, IISc Bangalore, IIIT Hyderabad</span>
-                <br><span>Step 4: 5 Winners team from each location will demonstrate their solution at IMC-2024 event</span>
-              </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTen">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTen"
+              aria-expanded="false"
+              aria-controls="collapseTen">
+              <i class="fas fa-chevron-down accordion-icon"></i>
+              <span>Q. What are the various phases of this hackathon?</span>
+            </button>
+          </h2>
+          <div
+            id="collapseTen"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTen"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              <span>Step 1: Submit application on the website. https://5g6g-hackathon2024.tcoe.in/ upto 15th September 2024.</span>
+              <br><span>Step 2: Phase-I (Online Evaluation): 5 Min presentation to Technical Evaluation Committee</span>
+              <br><span>Step 3: Phase-II (Physical Evaluation): Shortlisted Participants of Phase-I, will visit one of the 5G Lab location among Delhi Technological University (DTU) Delhi, IISc Bangalore, IIIT Hyderabad</span>
+              <br><span>Step 4: 5 Winners team from each location will demonstrate their solution at IMC-2024 event</span>
             </div>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingFive">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFive"
-                aria-expanded="false"
-                aria-controls="collapseFive">
-                <i class="fas fa-chevron-down accordion-icon"></i>
-                <span>Q. Is TRL Level3/POC and above stage of the product necessary to apply?</span>
-              </button>
-            </h2>
-            <div
-              id="collapseFive"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingFive"
-              data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                <span>A. Yes</span>
-              </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFive"
+              aria-expanded="false"
+              aria-controls="collapseFive">
+              <i class="fas fa-chevron-down accordion-icon"></i>
+              <span>Q. Is TRL Level3/POC and above stage of the product necessary to apply?</span>
+            </button>
+          </h2>
+          <div
+            id="collapseFive"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingFive"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              <span>A. Yes</span>
             </div>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingSix">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseSix"
-                aria-expanded="false"
-                aria-controls="collapseSix">
-                <i class="fas fa-chevron-down accordion-icon"></i>
-                <span>Q. What type of documents should academic institutions (Professors, students in any combination/ teams) upload in the (Applying as) section of the application form?</span>
-              </button>
-            </h2>
-            <div
-              id="collapseSix"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingSix"
-              data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                <span>
-                  A. They are required to upload a letter regarding their solution that has been forwarded with the approval / consent of HoD / Director of that institution.
-                </span>
-              </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSix">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSix"
+              aria-expanded="false"
+              aria-controls="collapseSix">
+              <i class="fas fa-chevron-down accordion-icon"></i>
+              <span>Q. What type of documents should academic institutions (Professors, students in any combination/ teams) upload in the (Applying as) section of the application form?</span>
+            </button>
+          </h2>
+          <div
+            id="collapseSix"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingSix"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              <span>
+                A. They are required to upload a letter regarding their solution that has been forwarded with the approval / consent of HoD / Director of that institution.
+              </span>
             </div>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingEight">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseEight"
-                aria-expanded="false"
-                aria-controls="collapseEight">
-                <i class="fas fa-chevron-down accordion-icon"></i>
-                <span>Q. Whom can I reach out to in case of questions/issues?</span>
-              </button>
-            </h2>
-            <div
-              id="collapseEight"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingEight"
-              data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                <span>
-                  A. You can reach us at 5g6ghack24@tcoe.in or call us at +91 84668-83949(Deepak Boorla).
-                </span>
-              </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingEight">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseEight"
+              aria-expanded="false"
+              aria-controls="collapseEight">
+              <i class="fas fa-chevron-down accordion-icon"></i>
+              <span>Q. Whom can I reach out to in case of questions/issues?</span>
+            </button>
+          </h2>
+          <div
+            id="collapseEight"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingEight"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              <span>
+                A. You can reach us at 5g6ghack24@tcoe.in or call us at +91 84668-83949(Deepak Boorla).
+              </span>
             </div>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingNine">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseNine"
-                aria-expanded="false"
-                aria-controls="collapseNine">
-                <i class="fas fa-chevron-down accordion-icon"></i>
-                <span>Q. Will there be any traveling reimbursement to attend the hackathon?</span>
-              </button>
-            </h2>
-            <div
-              id="collapseNine"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingNine"
-              data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                <span>
-                  A. Yes. Each team/individual will be reimbursed up to ₹5000.
-                </span>
-              </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingNine">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseNine"
+              aria-expanded="false"
+              aria-controls="collapseNine">
+              <i class="fas fa-chevron-down accordion-icon"></i>
+              <span>Q. Will there be any traveling reimbursement to attend the hackathon?</span>
+            </button>
+          </h2>
+          <div
+            id="collapseNine"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingNine"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              <span>
+                A. Yes. Each team/individual will be reimbursed up to ₹5000.
+              </span>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Contact Us Section -->
-    <section id="contact" class="py-5">
-      <div class="container-fluid text-center">
-        <h2 class="section-heading mb-4">Contact Us</h2>
-        <p class="lead mb-5">
-          Have a question? We would love to hear from you. Please reach out
-          to:
-        </p>
-        <div class="row">
-          <div class="col-md-4 mb-4">
-            <div class="contact-card p-4">
-              <h3 class="contact-location">Hyderabad</h3>
-              <p><strong>Srinath Reddy</strong></p>
-              <p>info@tcoe.in</p>
-              <p>9246818843</p>
-            </div>
+    </div>
+  </section>
+  <!-- Contact Us Section -->
+  <section id="contact" class="py-5">
+    <div class="container-fluid text-center">
+      <h2 class="section-heading mb-4">Contact Us</h2>
+      <p class="lead mb-5">
+        Have a question? We would love to hear from you. Please reach out
+        to:
+      </p>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="contact-card p-4">
+            <h3 class="contact-location">Hyderabad</h3>
+            <p><strong>Srinath Reddy</strong></p>
+            <p>info@tcoe.in</p>
+            <p>9246818843</p>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="contact-card p-4">
-              <h3 class="contact-location">Delhi</h3>
-              <p><strong>Srinath Reddy2</strong></p>
-              <p>info@tcoe.in</p>
-              <p>9246818843</p>
-            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="contact-card p-4">
+            <h3 class="contact-location">Delhi</h3>
+            <p><strong>Srinath Reddy2</strong></p>
+            <p>info@tcoe.in</p>
+            <p>9246818843</p>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="contact-card p-4">
-              <h3 class="contact-location">Bangalore</h3>
-              <p><strong>Srinath Reddy</strong></p>
-              <p>info@tcoe.in</p>
-              <p>9246818843</p>
-            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="contact-card p-4">
+            <h3 class="contact-location">Bangalore</h3>
+            <p><strong>Srinath Reddy</strong></p>
+            <p>info@tcoe.in</p>
+            <p>9246818843</p>
           </div>
         </div>
       </div>
-    </section>
-    <footer class="py-4">
-      <div class="container-fluid">
-        <div class="row text-center">
-          <div class="col-md-2">
-            <a class="navbar-brand p-0" href="#">
-              <img
-                src="assets/images/theaischoollogo.jpg"
-                class="w-25" alt="" />
-            </a>
-          </div>
-          <div class="col-md-5">
-            <p class="mb-0">
-              &copy; 2024 Powered by <a href="https://theaischool.co.in/" target="new">TheAISCHOOL</a> All Rights Reserved
-            </p>
-          </div>
-          <!-- <div class="col-md-2">
+    </div>
+  </section>
+  <footer class="py-4">
+    <div class="container-fluid">
+      <div class="row text-center">
+        <div class="col-md-2">
+          <a class="navbar-brand p-0" href="#">
+            <img
+              src="assets/images/theaischoollogo.jpg"
+              class="w-25" alt="" />
+          </a>
+        </div>
+        <div class="col-md-5">
+          <p class="mb-0">
+            &copy; 2024 Powered by <a href="https://theaischool.co.in/" target="new">TheAISCHOOL</a> All Rights Reserved
+          </p>
+        </div>
+        <!-- <div class="col-md-2">
             <div class="social-media-icons mb-2 mb-md-0">
               <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
               <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
               <a href="https://www.linkedin.com/company/theaischool/" target="new" class=""><i class="fab fa-linkedin-in"></i></a>
             </div>
           </div> -->
-          <div class="col-md-5">
-            <div class="footer-links">
-              <a href="https://docs.google.com/document/d/1XBzH-bCkSwC2uLHXwicYEwX9KL-5RHpKF3qMASycZwI/edit" target="_new" class="mx-2">Terms and Conditions</a> |
-              <a href="https://www.termsfeed.com/live/04e158e3-c7b3-4e59-8ff3-410f4e626060" target="_new" class="mx-2">Privacy Policy</a>
-            </div>
+        <div class="col-md-5">
+          <div class="footer-links">
+            <a href="https://docs.google.com/document/d/1XBzH-bCkSwC2uLHXwicYEwX9KL-5RHpKF3qMASycZwI/edit" target="_new" class="mx-2">Terms and Conditions</a> |
+            <a href="https://www.termsfeed.com/live/04e158e3-c7b3-4e59-8ff3-410f4e626060" target="_new" class="mx-2">Privacy Policy</a>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
   </div>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

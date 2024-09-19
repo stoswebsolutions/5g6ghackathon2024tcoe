@@ -1,4 +1,7 @@
 <?php
+header("Location: participant");
+exit();
+
 session_start();
 if (!isset($_SESSION['uniqueId'])) {
   header("Location: home");

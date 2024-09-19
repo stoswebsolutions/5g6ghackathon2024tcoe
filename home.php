@@ -1204,7 +1204,7 @@
                 </form>
               </div>
               <!-- Register Form -->
-              <div
+              <!-- <div
                 class="tab-pane fade card p-2"
                 id="register"
                 role="tabpanel">
@@ -1282,6 +1282,14 @@
                     </button>
                   </div>
                 </form>
+              </div> -->
+              <div
+                class="tab-pane fade card p-2"
+                id="register"
+                role="tabpanel">
+                <div class="text-center p-1">
+                  <h4><span class="text-danger">Registrations Closed on </span><br>18th September 2024</h4>
+                </div>
               </div>
             </div>
           </div>

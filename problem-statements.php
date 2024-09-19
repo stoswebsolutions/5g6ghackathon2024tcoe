@@ -528,10 +528,12 @@
                                 </li>
                             </ol>
 
-                            <div class="modal-footer">
+                            <!-- <div class="modal-footer">
                                 <input type="hidden" class="form-control" id="problemStatementValue" name="problemStatementValue" readonly>
-                                <button type="submit" class="btn btn-primary mt-3 text-white">I Agree
-                                </button>
+                                <button type="submit" class="btn btn-primary mt-3 text-white">I Agree</button>
+                            </div> -->
+                            <div class="modal-footer">
+                                <h5><span class="text-danger">Applications Closed on </span>18th September 2024</h5>
                             </div>
                         </div>
                     </form>

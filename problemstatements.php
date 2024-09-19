@@ -493,8 +493,11 @@
                                 abuse, threaten or harass any other person.
                             </li>
                         </ol>
-                        <div class="modal-footer">
+                        <!-- <div class="modal-footer">
                             <a href="home#authModal" class="btn btn-primary">I Agree</a>
+                        </div> -->
+                        <div class="modal-footer">
+                            <h6><span class="text-danger">Applications Closed on </span>18th September 2024</h6>
                         </div>
                     </div>
                 </div>
